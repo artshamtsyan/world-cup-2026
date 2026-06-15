@@ -548,9 +548,14 @@ const OFFICIAL = {
   2:{a:2,b:1},   // Korea Republic 2-1 Czechia
   3:{a:1,b:1},   // Canada 1-1 Bosnia and Herzegovina
   4:{a:4,b:1},   // United States 4-1 Paraguay
+  5:{a:2,b:0},   // Australia 2-0 Türkiye
   6:{a:1,b:1},   // Qatar 1-1 Switzerland
   7:{a:1,b:1},   // Brazil 1-1 Morocco
-  8:{a:0,b:1}    // Haiti 0-1 Scotland
+  8:{a:0,b:1},   // Haiti 0-1 Scotland
+  9:{a:7,b:1},   // Germany 7-1 Curacao
+  10:{a:2,b:2},  // Netherlands 2-2 Japan
+  11:{a:1,b:0},  // Ivory Coast 1-0 Ecuador
+  12:{a:5,b:1}   // Sweden 5-1 Tunisia
 };
 function isOfficial(n){ return !!OFFICIAL[n]; }
 
@@ -569,6 +574,9 @@ const META = {
   4:{goals:[{t:1,p:"Bobadilla",m:"7'",n:"OG"},{t:1,p:"Folarin Balogun",m:"31'"},{t:1,p:"Folarin Balogun",m:"45+5'"},{t:2,p:"Maurício",m:"73'"},{t:1,p:"Giovanni Reyna",m:"90+8'"}],
      xi:{1:["Matt Freese","Sergiño Dest","Chris Richards","Tim Ream","Alex Freeman","Antonee Robinson","Tyler Adams","Weston McKennie","Malik Tillman","Christian Pulisic","Folarin Balogun"],
          2:["Roberto Fernández","Júnior Alonso","Omar Alderete","Gustavo Gómez","Juan José Cáceres","Diego Gómez","Andrés Cubas","Damián Bobadilla","Antonio Sanabria","Julio Enciso","Miguel Almirón"]}},
+  5:{goals:[{t:1,p:"Nestory Irankunda",m:"27'"},{t:1,p:"Connor Metcalfe",m:"75'"}],
+     xi:{1:["Patrick Beach","Jordan Bos","Cameron Burgess","Harry Souttar","Alessandro Circati","Jacob Italiano","Aiden O'Neill","Connor Metcalfe","Paul Okon-Engstler","Mohamed Toure","Nestory Irankunda"],
+         2:["Ugurcan Cakir","Mehmet Celik","Merih Demiral","Abdulkerim Bardakci","Ferdi Kadioglu","Ismail Yuksek","Orkun Kokcu","Arda Guler","Baris Alper Yilmaz","Hakan Calhanoglu","Kerem Akturkoglu"]}},
   6:{goals:[{t:2,p:"Breel Embolo",m:"17'",n:"PEN"},{t:1,p:"Boualem Khoukhi",m:"90+4'"}],
      xi:{1:["Mahmoud Abunada","Pedro Miguel","Issa Laye","Jassem Gaber","Boualem Khoukhi","Ahmed Fathy","Assim Madibo","Edmilson Junior","Akram Afif","Yusuf Abdurisag","Hassan Al-Haydos"],
          2:["Gregor Kobel","Nico Elvedi","Manuel Akanji","Miro Muheim","Denis Zakaria","Ardon Jashari","Granit Xhaka","Fabian Rieder","Johan Manzambi","Zeki Amdouni","Breel Embolo"]}},
@@ -577,12 +585,24 @@ const META = {
          2:["Yassine Bounou","Achraf Hakimi","Issa Diop","Chadi Riad","Noussair Mazraoui","Ayyoub Bouaddi","Neil El Aynaoui","Azzedine Ounahi","Brahim Diaz","Ismael Saibari","Bilal El Khannouss"]}},
   8:{goals:[{t:2,p:"John McGinn",m:"28'"}],
      xi:{1:["Johny Placide","Carlens Arcus","Keeto Thermoncy","Ricardo Adé","Hannes Delcroix","Louicius Don Deedson","Danley Jean-Jacques","Martin Expérience","Jean-Ricner Bellegarde","Wilson Isidor","Frantzdy Pierrot"],
-         2:["Angus Gunn","Aaron Hickey","Andrew Robertson","Jack Hendry","Grant Hanley","Lewis Ferguson","John McGinn","Scott McTominay","Ben Doak","Che Adams","Lawrence Shankland"]}}
+         2:["Angus Gunn","Aaron Hickey","Andrew Robertson","Jack Hendry","Grant Hanley","Lewis Ferguson","John McGinn","Scott McTominay","Ben Doak","Che Adams","Lawrence Shankland"]}},
+  9:{goals:[{t:1,p:"Felix Nmecha",m:"6'"},{t:2,p:"Livano Comenencia",m:"21'"},{t:1,p:"Nico Schlotterbeck",m:"38'"},{t:1,p:"Kai Havertz",m:"45'+5",n:"PEN"},{t:1,p:"Jamal Musiala",m:"47'"},{t:1,p:"Nathaniel Brown",m:"68'"},{t:1,p:"Deniz Undav",m:"78'"},{t:1,p:"Kai Havertz",m:"88'"}],
+     xi:{1:["Manuel Neuer","Nico Schlotterbeck","Jonathan Tah","Joshua Kimmich","Aleksandar Pavlovic","Felix Nmecha","Florian Wirtz","Jamal Musiala","Leroy Sane","Kai Havertz","Deniz Undav"],
+         2:["Eloy Room","Deveron Fonville","Armando Obispo","Riechedly Bazoer","Sherel Floranus","Livano Comenencia","Juninho Bacuna","Leandro Bacuna","Jurgen Locadia","Sontje Hansen","Tahith Chong"]}},
+  10:{goals:[{t:1,p:"Virgil van Dijk",m:"51'"},{t:2,p:"Keito Nakamura",m:"57'"},{t:1,p:"Crysencio Summerville",m:"64'"},{t:2,p:"Daichi Kamada",m:"89'"}],
+      xi:{1:["Bart Verbruggen","Micky van de Ven","Virgil van Dijk","Jan Paul van Hecke","Denzel Dumfries","Frenkie de Jong","Tijjani Reijnders","Ryan Gravenberch","Cody Gakpo","Donyell Malen","Crysencio Summerville"],
+          2:["Zion Suzuki","Shogo Taniguchi","Hiroki Ito","Kaishu Sano","Daichi Kamada","Keito Nakamura","Ko Itakura","Takefusa Kubo","Ritsu Doan","Ayase Ueda","Daizen Maeda"]}},
+  11:{goals:[{t:1,p:"Amad Diallo",m:"90'"}],
+      xi:{1:["Yahia Fofana","Wilfried Singo","Ghislain Konan","Emmanuel Agbadou","Ousmane Diomande","Seko Fofana","Franck Kessie","Yan Diomande","Nicolas Pepe","Mohamed Toure","Elye Wahi"],
+          2:["Hernan Galindez","Piero Hincapie","William Pacho","Joel Ordonez","Pedro Vite","Alan Minda","Yaimar Medina","Moises Caicedo","Gonzalo Plata","John Yeboah","Enner Valencia"]}},
+  12:{goals:[{t:1,p:"Yasin Ayari",m:"7'"},{t:1,p:"Alexander Isak",m:"30'"},{t:2,p:"Omar Rekik",m:"43'"},{t:1,p:"Viktor Gyokeres",m:"59'"},{t:1,p:"Mattias Svanberg",m:"84'"},{t:1,p:"Yasin Ayari",m:"90'+6"}],
+      xi:{1:["Kristoffer Nordfeldt","Gustaf Lagerbielke","Isak Hien","Victor Nilsson Lindelof","Alexander Bernhardsson","Jesper Karlstrom","Yasin Ayari","Gabriel Gudmundsson","Benjamin Nygren","Viktor Gyokeres","Alexander Isak"],
+          2:["Aymen Dahmen","Yan Valery","Ali Abdi","Omar Rekik","Montassar Talbi","Ellyes Skhiri","Anis Ben Slimane","Hannibal Mejbri","Mohamed Amine Ben Hmida","Rani Khedira","Elias Saad"]}}
 };
 function goalScorer(x,g){ return g.t===1?x.t1:x.t2; }
 function goalNote(n){ return n==="OG"?"(o.g.)":n==="PEN"?"(pen)":"("+n+")"; }
 /* FIFA-official highlight video IDs (verified via YouTube oembed). Matches without an official upload fall back to a YouTube search. */
-const HL = { 1:"PmevGCkUtM8", 2:"6k18EJY8zIc", 3:"w-_rY5morQY", 4:"0PVo3bk-TMk", 8:"1TPBi5_c430" };
+const HL = { 1:"PmevGCkUtM8", 2:"6k18EJY8zIc", 3:"w-_rY5morQY", 4:"0PVo3bk-TMk", 5:"5eqzEDe8wHs", 8:"1TPBi5_c430", 9:"7Bi_7ODuu-k", 10:"mIiJQfa-XTE", 11:"MyrLhLNQwh4", 12:"ZANJQaCnkug" };
 
 /* ---- time conversion ---- */
 function etInstant(d,t){
