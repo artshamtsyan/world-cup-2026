@@ -555,7 +555,11 @@ const OFFICIAL = {
   9:{a:7,b:1},   // Germany 7-1 Curacao
   10:{a:2,b:2},  // Netherlands 2-2 Japan
   11:{a:1,b:0},  // Ivory Coast 1-0 Ecuador
-  12:{a:5,b:1}   // Sweden 5-1 Tunisia
+  12:{a:5,b:1},  // Sweden 5-1 Tunisia
+  13:{a:0,b:0},  // Spain 0-0 Cape Verde
+  14:{a:1,b:1},  // Belgium 1-1 Egypt
+  15:{a:1,b:1},  // Saudi Arabia 1-1 Uruguay
+  16:{a:2,b:2}   // Iran 2-2 New Zealand
 };
 function isOfficial(n){ return !!OFFICIAL[n]; }
 
@@ -597,12 +601,23 @@ const META = {
           2:["Hernan Galindez","Piero Hincapie","William Pacho","Joel Ordonez","Pedro Vite","Alan Minda","Yaimar Medina","Moises Caicedo","Gonzalo Plata","John Yeboah","Enner Valencia"]}},
   12:{goals:[{t:1,p:"Yasin Ayari",m:"7'"},{t:1,p:"Alexander Isak",m:"30'"},{t:2,p:"Omar Rekik",m:"43'"},{t:1,p:"Viktor Gyokeres",m:"59'"},{t:1,p:"Mattias Svanberg",m:"84'"},{t:1,p:"Yasin Ayari",m:"90'+6"}],
       xi:{1:["Kristoffer Nordfeldt","Gustaf Lagerbielke","Isak Hien","Victor Nilsson Lindelof","Alexander Bernhardsson","Jesper Karlstrom","Yasin Ayari","Gabriel Gudmundsson","Benjamin Nygren","Viktor Gyokeres","Alexander Isak"],
-          2:["Aymen Dahmen","Yan Valery","Ali Abdi","Omar Rekik","Montassar Talbi","Ellyes Skhiri","Anis Ben Slimane","Hannibal Mejbri","Mohamed Amine Ben Hmida","Rani Khedira","Elias Saad"]}}
+          2:["Aymen Dahmen","Yan Valery","Ali Abdi","Omar Rekik","Montassar Talbi","Ellyes Skhiri","Anis Ben Slimane","Hannibal Mejbri","Mohamed Amine Ben Hmida","Rani Khedira","Elias Saad"]}},
+  13:{xi:{1:["Unai Simón","Marcos Llorente","Pau Cubarsí","Aymeric Laporte","Marc Cucurella","Fabián Ruiz","Rodri","Pedri","Ferran Torres","Mikel Oyarzabal","Gavi"],
+          2:["Vozinha","Steven Moreira","Roberto Lopes","Diney Borges","Sidny Lopes Cabral","Kevin Pina","Laros Duarte","Ryan Mendes","Jamiro Monteiro","Jovane Cabral","Dailon Livramento"]}},
+  14:{goals:[{t:2,p:"Emam Ashour",m:"19'"},{t:1,p:"Mohamed Hany",m:"66'",n:"OG"}],
+      xi:{1:["Thibaut Courtois","Thomas Meunier","Brandon Mechele","Nathan Ngoy","Timothy Castagne","Youri Tielemans","Amadou Onana","Jérémy Doku","Kevin De Bruyne","Leandro Trossard","Charles De Ketelaere"],
+          2:["Mostafa Shobeir","Mohamed Hany","Yasser Ibrahim","Hamdi Fathy","Ahmed Fatouh","Marwan Attia","Mohanad Lasheen","Mohamed Salah","Emam Ashour","Mostafa Zico","Omar Marmoush"]}},
+  15:{goals:[{t:1,p:"Abdulelah Al-Amri",m:"41'"},{t:2,p:"Maxi Araújo",m:"80'"}],
+      xi:{1:["Mohammed Al-Owais","Saud Abdulhamid","Hassan Al-Tambakti","Abdulelah Al-Amri","Moteb Al-Harbi","Mohammed Abu Al-Shamat","Mohamed Kanno","Abdullah Al-Khaibari","Salem Al-Dawsari","Feras Al-Brikan","Musab Al-Juwayr"],
+          2:["Fernando Muslera","Guillermo Varela","Sebastián Cáceres","Mathías Olivera","Matías Viña","Federico Valverde","Manuel Ugarte","Rodrigo Bentancur","Maxi Araújo","Federico Viñas","Darwin Núñez"]}},
+  16:{goals:[{t:2,p:"Elijah Just",m:"7'"},{t:1,p:"Ramin Rezaeian",m:"32'"},{t:2,p:"Elijah Just",m:"54'"},{t:1,p:"Mohammad Mohebbi",m:"64'"}],
+      xi:{1:["Alireza Beiranvand","Ramin Rezaeian","Shoja Khalilzadeh","Ali Nemati","Milad Mohammadi","Saeid Ezatolahi","Saman Ghoddos","Mohammad Mohebbi","Aria Yousefi","Shahriyar Moghanlou","Mehdi Taremi"],
+          2:["Max Crocombe","Tim Payne","Finn Surman","Michael Boxall","Liberato Cacace","Joe Bell","Marko Stamenic","Callum McCowatt","Sarpreet Singh","Elijah Just","Chris Wood"]}}
 };
 function goalScorer(x,g){ return g.t===1?x.t1:x.t2; }
 function goalNote(n){ return n==="OG"?"(o.g.)":n==="PEN"?"(pen)":"("+n+")"; }
 /* FIFA-official highlight video IDs (verified via YouTube oembed). Matches without an official upload fall back to a YouTube search. */
-const HL = { 1:"PmevGCkUtM8", 2:"6k18EJY8zIc", 3:"w-_rY5morQY", 4:"0PVo3bk-TMk", 5:"5eqzEDe8wHs", 8:"1TPBi5_c430", 9:"7Bi_7ODuu-k", 10:"mIiJQfa-XTE", 11:"MyrLhLNQwh4", 12:"ZANJQaCnkug" };
+const HL = { 1:"PmevGCkUtM8", 2:"6k18EJY8zIc", 3:"w-_rY5morQY", 4:"0PVo3bk-TMk", 5:"5eqzEDe8wHs", 8:"1TPBi5_c430", 9:"7Bi_7ODuu-k", 10:"mIiJQfa-XTE", 11:"MyrLhLNQwh4", 12:"ZANJQaCnkug", 13:"_lGmi17mRYI", 14:"nR2SQc4ZHNQ", 15:"RQTYII_E1Nk" };
 
 /* ---- time conversion ---- */
 function etInstant(d,t){
