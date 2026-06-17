@@ -239,6 +239,7 @@
   .topr{display:flex;align-items:center;}
   .anthemBtn{background:rgba(255,255,255,.08);border:1px solid var(--line);color:var(--gold);font-size:15px;
     width:34px;height:34px;border-radius:50%;cursor:pointer;margin-right:10px;flex:none;}
+  .sync{font-size:9.5px;font-weight:900;letter-spacing:.6px;color:var(--dim2);margin-right:11px;flex:none;white-space:nowrap;}
 
   /* ---------------- CARD GOALS LINE ---------------- */
   .mc-goals{display:flex;align-items:center;justify-content:center;gap:11px;font-size:10.5px;font-weight:700;
@@ -342,7 +343,7 @@
 
 <div class="top">
   <div class="wm"><span class="t">🏆</span><span>World&nbsp;Cup&nbsp;<b>2026</b></span></div>
-  <div class="topr"><button class="anthemBtn" id="anthemBtn" title="Opening anthem">♪</button><div class="clk" id="clk">—</div></div>
+  <div class="topr"><span class="sync" id="sync" title="Live scores from ESPN">○</span><button class="anthemBtn" id="anthemBtn" title="Opening anthem">♪</button><div class="clk" id="clk">—</div></div>
 </div>
 
 <div class="views">
@@ -649,11 +650,16 @@ function rel(key){ const d=dayDiff(key);
 const SKEY="wc2026scores"; let SCORES={};
 try{ SCORES=JSON.parse(localStorage.getItem(SKEY)||"{}"); }catch(e){ SCORES={}; }
 function saveScores(){ try{ localStorage.setItem(SKEY,JSON.stringify(SCORES)); }catch(e){} }
-function getScore(n){ return OFFICIAL[n]||SCORES[n]; }
+/* LIVE overlay: scores/status fetched from ESPN's public FIFA World Cup API on every open
+   (cached to localStorage for offline). Precedence: curated OFFICIAL > LIVE > user prediction. */
+let LIVE={}; try{ LIVE=JSON.parse(localStorage.getItem("wc2026live")||"{}"); }catch(e){ LIVE={}; }
+function getScore(n){ return OFFICIAL[n]||LIVE[n]||SCORES[n]; }
+function isResult(n){ return isOfficial(n)||!!LIVE[n]; }
 function setScore(n,a,b){ if(a===""||b===""||a==null||b==null) delete SCORES[n]; else SCORES[n]={a:parseInt(a,10),b:parseInt(b,10)}; saveScores(); }
 
 /* ---- status ---- */
-function matchStatus(x){ const now=new Date(),end=new Date(x.dt.getTime()+115*60000);
+function matchStatus(x){ const lv=LIVE[x.num]; if(lv) return lv.st;
+  const now=new Date(),end=new Date(x.dt.getTime()+115*60000);
   if(now>=x.dt&&now<end) return "live"; if(now>=end||getScore(x.num)) return "ft";
   if(now>=new Date(x.dt.getTime()-3600000)) return "soon"; return "up"; }
 function isPlayed(x){ return new Date()>=new Date(x.dt.getTime()+105*60000); }
@@ -823,12 +829,16 @@ function renderSheet(){
 
   // score block
   let scoreBlock;
-  if(isOfficial(x.num)){
-    scoreBlock=`<div class="scoreEdit official">
+  const lv=LIVE[x.num];
+  if(isOfficial(x.num) || lv){
+    const liveNow = lv && lv.st==='live';
+    const lab = liveNow ? `<div class="lab" style="color:var(--live)">● LIVE NOW · ESPN</div>`
+      : `<div class="lab ft">${isOfficial(x.num)?'✓ OFFICIAL FULL-TIME RESULT':'✓ FULL TIME · LIVE FROM ESPN'}</div>`;
+    scoreBlock=`<div class="scoreEdit official"${liveNow?' style="border-color:rgba(255,45,85,.4)"':''}>
         <span class="st">${m1.flag} ${m1.code}</span>
-        <span class="offsc">${s.a}</span><span class="dh">:</span><span class="offsc">${s.b}</span>
+        <span class="offsc"${liveNow?' style="color:var(--live)"':''}>${s.a}</span><span class="dh">:</span><span class="offsc"${liveNow?' style="color:var(--live)"':''}>${s.b}</span>
         <span class="st">${m2.code} ${m2.flag}</span></div>
-      <div class="lab ft">✓ OFFICIAL FULL-TIME RESULT</div>`;
+      ${lab}`;
   } else if(m1.real&&m2.real){
     scoreBlock=`<div class="scoreEdit">
         <span class="st">${m1.flag} ${m1.code}</span>
@@ -980,9 +990,53 @@ $("#spAnthem").addEventListener("click",e=>{ if(e.target.closest("#spPlay")) $("
 $("#spEnter").onclick=()=>{ const sp=$("#splash"); sp.classList.add("hide"); setTimeout(()=>{ sp.style.display="none"; anthemIdle(); },650); };
 $("#anthemBtn").onclick=()=>{ const sp=$("#splash"); anthemIdle(); sp.style.display="flex"; requestAnimationFrame(()=>sp.classList.remove("hide")); };
 
+/* ---- live scores from ESPN's public FIFA World Cup API ---- */
+function nkey(s){ return (s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z]/g,""); }
+const ESPN_ALIAS={southkorea:"korearepublic",usa:"unitedstates",unitedstatesofamerica:"unitedstates",
+  congodr:"drcongo",bosniaherzegovina:"bosniaandherzegovina",cotedivoire:"ivorycoast",caboverde:"capeverde",turkey:"turkiye"};
+const TEAMKEY={}; Object.keys(TEAMS).forEach(n=>TEAMKEY[nkey(n)]=n);
+function espnTeam(name){ let k=nkey(name); k=ESPN_ALIAS[k]||k; return TEAMKEY[k]||null; }
+function findMatch(a,b){ return MATCHES.find(x=>{
+  const t1=TEAMS[x.t1]?x.t1:(resolveSlot(x.t1)||x.t1), t2=TEAMS[x.t2]?x.t2:(resolveSlot(x.t2)||x.t2);
+  return (t1===a&&t2===b)||(t1===b&&t2===a); }); }
+const PLAY_STATES=["STATUS_FIRST_HALF","STATUS_SECOND_HALF","STATUS_HALFTIME","STATUS_IN_PROGRESS","STATUS_EXTRA_TIME","STATUS_SHOOTOUT","STATUS_END_OF_PERIOD","STATUS_OVERTIME"];
+const FT_STATES=["STATUS_FULL_TIME","STATUS_FINAL","STATUS_FULL_TIME_AET","STATUS_FULL_PEN","STATUS_FINAL_AET","STATUS_FINAL_PEN"];
+function setSync(s){ const el=$("#sync"); if(!el) return;
+  if(s==='live'){ el.innerHTML="● LIVE"; el.style.color="var(--green)"; }
+  else { el.innerHTML="○ OFFLINE"; el.style.color="var(--dim2)"; } }
+function rerenderAll(){ const sc=feed.scrollTop; buildFeed(); buildGroups(); buildScorers(); buildBracket(); feed.scrollTop=sc;
+  if(sheetNum!=null && $("#sheet").classList.contains("open")) renderSheet(); }
+async function fetchLive(){
+  const now=new Date();
+  const dts=[-1,0,1].map(o=>new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"})
+    .format(new Date(now.getTime()+o*864e5)).replace(/-/g,""));
+  let changed=false, ok=false;
+  for(const dt of dts){
+    try{
+      const r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=${dt}`);
+      if(!r.ok) continue; const j=await r.json(); ok=true;
+      (j.events||[]).forEach(e=>{ const c=e.competitions&&e.competitions[0]; if(!c) return;
+        const st=e.status&&e.status.type&&e.status.type.name;
+        const cs=(c.competitors||[]).map(z=>({t:espnTeam(z.team&&z.team.displayName),s:parseInt(z.score,10)}));
+        if(cs.length!==2||!cs[0].t||!cs[1].t) return;
+        const m=findMatch(cs[0].t,cs[1].t); if(!m) return;
+        const A=cs.find(z=>z.t===m.t1), B=cs.find(z=>z.t===m.t2); if(!A||!B) return;
+        const ft=FT_STATES.includes(st), live=PLAY_STATES.includes(st);
+        if((ft||live)&&!isNaN(A.s)&&!isNaN(B.s)){
+          const nx={a:A.s,b:B.s,st:ft?"ft":"live"}, pv=LIVE[m.num];
+          if(!pv||pv.a!==nx.a||pv.b!==nx.b||pv.st!==nx.st){ LIVE[m.num]=nx; changed=true; }
+        }
+      });
+    }catch(e){}
+  }
+  setSync(ok?'live':'off');
+  if(changed){ try{ localStorage.setItem("wc2026live",JSON.stringify(LIVE)); }catch(e){} rerenderAll(); }
+}
+
 /* ---- init ---- */
 buildDates(); buildFeed(); buildGroups(); buildScorers(); buildBracket(); clock(); setInterval(clock,30000);
 setTimeout(()=>jumpToday(false),120);
+fetchLive(); setInterval(fetchLive,60000);
 </script>
 </body>
 </html>
