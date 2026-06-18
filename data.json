@@ -1,0 +1,596 @@
+{
+ "updated": "2026-06-18T17:37:27.806Z",
+ "source": "football-data.org",
+ "results": [
+  {
+   "home": "Mexico",
+   "away": "South Africa",
+   "hs": 2,
+   "as": 0,
+   "utc": "2026-06-11T19:00:00Z"
+  },
+  {
+   "home": "South Korea",
+   "away": "Czechia",
+   "hs": 2,
+   "as": 1,
+   "utc": "2026-06-12T02:00:00Z"
+  },
+  {
+   "home": "Canada",
+   "away": "Bosnia-Herzegovina",
+   "hs": 1,
+   "as": 1,
+   "utc": "2026-06-12T19:00:00Z"
+  },
+  {
+   "home": "United States",
+   "away": "Paraguay",
+   "hs": 4,
+   "as": 1,
+   "utc": "2026-06-13T01:00:00Z"
+  },
+  {
+   "home": "Qatar",
+   "away": "Switzerland",
+   "hs": 1,
+   "as": 1,
+   "utc": "2026-06-13T19:00:00Z"
+  },
+  {
+   "home": "Brazil",
+   "away": "Morocco",
+   "hs": 1,
+   "as": 1,
+   "utc": "2026-06-13T22:00:00Z"
+  },
+  {
+   "home": "Haiti",
+   "away": "Scotland",
+   "hs": 0,
+   "as": 1,
+   "utc": "2026-06-14T01:00:00Z"
+  },
+  {
+   "home": "Australia",
+   "away": "Turkey",
+   "hs": 2,
+   "as": 0,
+   "utc": "2026-06-14T04:00:00Z"
+  },
+  {
+   "home": "Germany",
+   "away": "Curaçao",
+   "hs": 7,
+   "as": 1,
+   "utc": "2026-06-14T17:00:00Z"
+  },
+  {
+   "home": "Netherlands",
+   "away": "Japan",
+   "hs": 2,
+   "as": 2,
+   "utc": "2026-06-14T20:00:00Z"
+  },
+  {
+   "home": "Ivory Coast",
+   "away": "Ecuador",
+   "hs": 1,
+   "as": 0,
+   "utc": "2026-06-14T23:00:00Z"
+  },
+  {
+   "home": "Sweden",
+   "away": "Tunisia",
+   "hs": 5,
+   "as": 1,
+   "utc": "2026-06-15T02:00:00Z"
+  },
+  {
+   "home": "Spain",
+   "away": "Cape Verde Islands",
+   "hs": 0,
+   "as": 0,
+   "utc": "2026-06-15T16:00:00Z"
+  },
+  {
+   "home": "Belgium",
+   "away": "Egypt",
+   "hs": 1,
+   "as": 1,
+   "utc": "2026-06-15T19:00:00Z"
+  },
+  {
+   "home": "Saudi Arabia",
+   "away": "Uruguay",
+   "hs": 1,
+   "as": 1,
+   "utc": "2026-06-15T22:00:00Z"
+  },
+  {
+   "home": "Iran",
+   "away": "New Zealand",
+   "hs": 2,
+   "as": 2,
+   "utc": "2026-06-16T01:00:00Z"
+  },
+  {
+   "home": "France",
+   "away": "Senegal",
+   "hs": 3,
+   "as": 1,
+   "utc": "2026-06-16T19:00:00Z"
+  },
+  {
+   "home": "Iraq",
+   "away": "Norway",
+   "hs": 1,
+   "as": 4,
+   "utc": "2026-06-16T22:00:00Z"
+  },
+  {
+   "home": "Argentina",
+   "away": "Algeria",
+   "hs": 3,
+   "as": 0,
+   "utc": "2026-06-17T01:00:00Z"
+  },
+  {
+   "home": "Austria",
+   "away": "Jordan",
+   "hs": 3,
+   "as": 1,
+   "utc": "2026-06-17T04:00:00Z"
+  },
+  {
+   "home": "Portugal",
+   "away": "Congo DR",
+   "hs": 1,
+   "as": 1,
+   "utc": "2026-06-17T17:00:00Z"
+  },
+  {
+   "home": "England",
+   "away": "Croatia",
+   "hs": 4,
+   "as": 2,
+   "utc": "2026-06-17T20:00:00Z"
+  },
+  {
+   "home": "Ghana",
+   "away": "Panama",
+   "hs": 1,
+   "as": 0,
+   "utc": "2026-06-17T23:00:00Z"
+  },
+  {
+   "home": "Uzbekistan",
+   "away": "Colombia",
+   "hs": 1,
+   "as": 3,
+   "utc": "2026-06-18T02:00:00Z"
+  }
+ ],
+ "scorers": [
+  {
+   "name": "Lionel Messi",
+   "team": "Argentina",
+   "goals": 3,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Folarin Balogun",
+   "team": "United States",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Kai Havertz",
+   "team": "Germany",
+   "goals": 2,
+   "pens": 1,
+   "assists": 0
+  },
+  {
+   "name": "Yasin Ayari",
+   "team": "Sweden",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Elijah Just",
+   "team": "New Zealand",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Kylian Mbappé",
+   "team": "France",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Erling Haaland",
+   "team": "Norway",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Harry Kane",
+   "team": "England",
+   "goals": 2,
+   "pens": 1,
+   "assists": 0
+  },
+  {
+   "name": "Julián Quiñones",
+   "team": "Mexico",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Raúl Jiménez",
+   "team": "Mexico",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Ladislav Krejčí",
+   "team": "Czechia",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "In-beom Hwang",
+   "team": "South Korea",
+   "goals": 1,
+   "pens": 0,
+   "assists": 1
+  },
+  {
+   "name": "Hyun-Gyu Oh",
+   "team": "South Korea",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Jovo Lukić",
+   "team": "Bosnia-Herzegovina",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Cyle Larin",
+   "team": "Canada",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Mauricio",
+   "team": "Paraguay",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Gio Reyna",
+   "team": "United States",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Breel Embolo",
+   "team": "Switzerland",
+   "goals": 1,
+   "pens": 1,
+   "assists": 0
+  },
+  {
+   "name": "Boualem Khoukhi",
+   "team": "Qatar",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Ismael Saibari",
+   "team": "Morocco",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Vinicius Junior",
+   "team": "Brazil",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "John McGinn",
+   "team": "Scotland",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Nestor Irankunda",
+   "team": "Australia",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Connor Metcalfe",
+   "team": "Australia",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Felix Kalu Nmecha",
+   "team": "Germany",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Livano Comenencia",
+   "team": "Curaçao",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Nico Schlotterbeck",
+   "team": "Germany",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Jamal Musiala",
+   "team": "Germany",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Nathaniel Brown",
+   "team": "Germany",
+   "goals": 1,
+   "pens": 0,
+   "assists": 1
+  },
+  {
+   "name": "Deniz Undav",
+   "team": "Germany",
+   "goals": 1,
+   "pens": 0,
+   "assists": 2
+  },
+  {
+   "name": "Virgil van Dijk",
+   "team": "Netherlands",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Keito Nakamura",
+   "team": "Japan",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Crysencio Summerville",
+   "team": "Netherlands",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Daichi Kamada",
+   "team": "Japan",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Amad Diallo",
+   "team": "Ivory Coast",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Alexander Isak",
+   "team": "Sweden",
+   "goals": 1,
+   "pens": 0,
+   "assists": 2
+  },
+  {
+   "name": "Omar Rekik",
+   "team": "Tunisia",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Viktor Gyökeres",
+   "team": "Sweden",
+   "goals": 1,
+   "pens": 0,
+   "assists": 1
+  },
+  {
+   "name": "Mattias Svanberg",
+   "team": "Sweden",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Emam Ashour",
+   "team": "Egypt",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Abdulelah Al Amri",
+   "team": "Saudi Arabia",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Maximiliano Araújo",
+   "team": "Uruguay",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Ramin Rezaeian",
+   "team": "Iran",
+   "goals": 1,
+   "pens": 0,
+   "assists": 1
+  },
+  {
+   "name": "Mohammad Mohebi",
+   "team": "Iran",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Bradley Barcola",
+   "team": "France",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Ibrahim M'Baye",
+   "team": "Senegal",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Aymen Hussein",
+   "team": "Iraq",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Leo Østigård",
+   "team": "Norway",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Romano Schmid",
+   "team": "Austria",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Ali Olwan",
+   "team": "Jordan",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Marko Arnautovic",
+   "team": "Austria",
+   "goals": 1,
+   "pens": 1,
+   "assists": 0
+  },
+  {
+   "name": "Joao Neves",
+   "team": "Portugal",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Yoane Wissa",
+   "team": "Congo DR",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Martin Baturina",
+   "team": "Croatia",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Petar Musa",
+   "team": "Croatia",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Jude Bellingham",
+   "team": "England",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Marcus Rashford",
+   "team": "England",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Caleb Yirenkyi",
+   "team": "Ghana",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Daniel Muñoz",
+   "team": "Colombia",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Abbosbek Fayzullaev",
+   "team": "Uzbekistan",
+   "goals": 1,
+   "pens": 0,
+   "assists": 0
+  }
+ ]
+}

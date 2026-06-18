@@ -654,14 +654,19 @@ function saveScores(){ try{ localStorage.setItem(SKEY,JSON.stringify(SCORES)); }
    (cached to localStorage for offline). Precedence: curated OFFICIAL > LIVE > user prediction. */
 let LIVE={}; try{ LIVE=JSON.parse(localStorage.getItem("wc2026live")||"{}"); }catch(e){ LIVE={}; }
 let LIVEGOALS={}; try{ LIVEGOALS=JSON.parse(localStorage.getItem("wc2026livegoals")||"{}"); }catch(e){ LIVEGOALS={}; }
-function getScore(n){ return OFFICIAL[n]||LIVE[n]||SCORES[n]; }
-function isResult(n){ return isOfficial(n)||!!LIVE[n]; }
+/* FD = authoritative finished scores + Golden Boot from football-data.org, served via data.json
+   (refreshed by a GitHub Action every ~30 min). Precedence: OFFICIAL > FD > LIVE(ESPN) > prediction. */
+let FD={}; try{ FD=JSON.parse(localStorage.getItem("wc2026fd")||"{}"); }catch(e){ FD={}; }
+let FDSCORERS=null; try{ FDSCORERS=JSON.parse(localStorage.getItem("wc2026fdsc")||"null"); }catch(e){ FDSCORERS=null; }
+let lastDataUpdated=null;
+function getScore(n){ return OFFICIAL[n]||FD[n]||LIVE[n]||SCORES[n]; }
+function isResult(n){ return isOfficial(n)||!!FD[n]||!!LIVE[n]; }
 /* goals for a match: curated baked goals win; else live goals from ESPN; null if none */
 function matchGoals(x){ const g=(META[x.num]&&META[x.num].goals)||LIVEGOALS[x.num]; return (g&&g.length)?g:null; }
 function setScore(n,a,b){ if(a===""||b===""||a==null||b==null) delete SCORES[n]; else SCORES[n]={a:parseInt(a,10),b:parseInt(b,10)}; saveScores(); }
 
 /* ---- status ---- */
-function matchStatus(x){ const lv=LIVE[x.num]; if(lv) return lv.st;
+function matchStatus(x){ const r=FD[x.num]||LIVE[x.num]; if(r) return r.st;
   const now=new Date(),end=new Date(x.dt.getTime()+115*60000);
   if(now>=x.dt&&now<end) return "live"; if(now>=end||getScore(x.num)) return "ft";
   if(now>=new Date(x.dt.getTime()-3600000)) return "soon"; return "up"; }
@@ -930,7 +935,11 @@ function topScorers(){
   return Object.values(tally).sort((a,b)=>b.goals-a.goals||a.player.localeCompare(b.player));
 }
 function buildScorers(){
-  const list=topScorers(), wrap=$("#scorers");
+  const wrap=$("#scorers");
+  let list = (FDSCORERS&&FDSCORERS.length)
+    ? FDSCORERS.map(s=>({player:s.name,team:espnTeam(s.team)||s.team,goals:s.goals,pens:s.pens})).filter(s=>s.goals>0)
+    : topScorers();
+  list=list.slice().sort((a,b)=>b.goals-a.goals||(a.player<b.player?-1:1));
   if(!list.length){ wrap.innerHTML='<div class="lineNote">No goals recorded yet.</div>'; return; }
   wrap.innerHTML=list.map(s=>{ const t=teamMeta(s.team), rank=list.filter(o=>o.goals>s.goals).length+1, lead=rank===1;
     return `<div class="lbrow ${lead?'lead':''}">
@@ -996,7 +1005,8 @@ $("#anthemBtn").onclick=()=>{ const sp=$("#splash"); anthemIdle(); sp.style.disp
 /* ---- live scores from ESPN's public FIFA World Cup API ---- */
 function nkey(s){ return (s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z]/g,""); }
 const ESPN_ALIAS={southkorea:"korearepublic",usa:"unitedstates",unitedstatesofamerica:"unitedstates",
-  congodr:"drcongo",bosniaherzegovina:"bosniaandherzegovina",cotedivoire:"ivorycoast",caboverde:"capeverde",turkey:"turkiye"};
+  congodr:"drcongo",bosniaherzegovina:"bosniaandherzegovina",cotedivoire:"ivorycoast",caboverde:"capeverde",
+  capeverdeislands:"capeverde",turkey:"turkiye"};
 const TEAMKEY={}; Object.keys(TEAMS).forEach(n=>TEAMKEY[nkey(n)]=n);
 function espnTeam(name){ let k=nkey(name); k=ESPN_ALIAS[k]||k; return TEAMKEY[k]||null; }
 function findMatch(a,b){ return MATCHES.find(x=>{
@@ -1051,10 +1061,25 @@ async function fetchLive(offsets){
   setSync(ok?'live':'off');
   if(changed){ try{ localStorage.setItem("wc2026live",JSON.stringify(LIVE)); localStorage.setItem("wc2026livegoals",JSON.stringify(LIVEGOALS)); }catch(e){} rerenderAll(); }
 }
+/* authoritative results + Golden Boot from football-data.org (data.json, refreshed by GitHub Action) */
+async function fetchData(){
+  try{
+    const r=await fetch("./data.json?t="+Date.now()); if(!r.ok) return; const d=await r.json();
+    const fd={};
+    (d.results||[]).forEach(x=>{ const a=espnTeam(x.home), b=espnTeam(x.away); if(!a||!b) return;
+      const m=findMatch(a,b); if(!m) return;
+      fd[m.num]={a:(m.t1===a?x.hs:x.as), b:(m.t1===a?x.as:x.hs), st:"ft"};
+    });
+    FD=fd; FDSCORERS=(d.scorers&&d.scorers.length)?d.scorers:null; lastDataUpdated=d.updated||null;
+    try{ localStorage.setItem("wc2026fd",JSON.stringify(FD)); localStorage.setItem("wc2026fdsc",JSON.stringify(FDSCORERS)); }catch(e){}
+    rerenderAll();
+  }catch(e){}
+}
 
 /* ---- init ---- */
 buildDates(); buildFeed(); buildGroups(); buildScorers(); buildBracket(); clock(); setInterval(clock,30000);
 setTimeout(()=>jumpToday(false),120);
+fetchData(); setInterval(fetchData,120000);
 fetchLive([-5,-4,-3,-2,-1,0,1]); setInterval(()=>fetchLive([-1,0,1]),60000);
 </script>
 </body>
