@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-18T20:26:30.278Z",
+ "updated": "2026-06-18T22:30:37.386Z",
  "source": "football-data.org",
  "results": [
   {
@@ -176,6 +176,13 @@
    "hs": 1,
    "as": 1,
    "utc": "2026-06-18T16:00:00Z"
+  },
+  {
+   "home": "Switzerland",
+   "away": "Bosnia-Herzegovina",
+   "hs": 4,
+   "as": 1,
+   "utc": "2026-06-18T19:00:00Z"
   }
  ],
  "scorers": [
@@ -183,6 +190,13 @@
    "name": "Lionel Messi",
    "team": "Argentina",
    "goals": 3,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Cyle Larin",
+   "team": "Canada",
+   "goals": 2,
    "pens": 0,
    "assists": 0
   },
@@ -236,6 +250,13 @@
    "assists": 0
   },
   {
+   "name": "Johan Manzambi",
+   "team": "Switzerland",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
    "name": "Julián Quiñones",
    "team": "Mexico",
    "goals": 1,
@@ -278,13 +299,6 @@
    "assists": 0
   },
   {
-   "name": "Cyle Larin",
-   "team": "Canada",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
    "name": "Mauricio",
    "team": "Paraguay",
    "goals": 1,
@@ -303,7 +317,7 @@
    "team": "Switzerland",
    "goals": 1,
    "pens": 1,
-   "assists": 0
+   "assists": 1
   },
   {
    "name": "Boualem Khoukhi",
@@ -588,13 +602,6 @@
   {
    "name": "Daniel Muñoz",
    "team": "Colombia",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Abbosbek Fayzullaev",
-   "team": "Uzbekistan",
    "goals": 1,
    "pens": 0,
    "assists": 0
