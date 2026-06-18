@@ -28,6 +28,6 @@ let prev = ''; try { prev = readFileSync('data.json', 'utf8'); } catch {}
 const stripTs = o => JSON.stringify({ ...JSON.parse(o), updated: 0 });
 let changed = true; try { changed = stripTs(prev) !== stripTs(JSON.stringify(out)); } catch { changed = true; }
 
-writeFileSync('data.json', JSON.stringify(out, null, 1));
+if (changed) writeFileSync('data.json', JSON.stringify(out, null, 1));
 console.log(`data.json: ${results.length} results, ${scorers.length} scorers, changed=${changed}`);
 if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `changed=${changed}\n`, { flag: 'a' });
