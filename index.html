@@ -653,8 +653,11 @@ function saveScores(){ try{ localStorage.setItem(SKEY,JSON.stringify(SCORES)); }
 /* LIVE overlay: scores/status fetched from ESPN's public FIFA World Cup API on every open
    (cached to localStorage for offline). Precedence: curated OFFICIAL > LIVE > user prediction. */
 let LIVE={}; try{ LIVE=JSON.parse(localStorage.getItem("wc2026live")||"{}"); }catch(e){ LIVE={}; }
+let LIVEGOALS={}; try{ LIVEGOALS=JSON.parse(localStorage.getItem("wc2026livegoals")||"{}"); }catch(e){ LIVEGOALS={}; }
 function getScore(n){ return OFFICIAL[n]||LIVE[n]||SCORES[n]; }
 function isResult(n){ return isOfficial(n)||!!LIVE[n]; }
+/* goals for a match: curated baked goals win; else live goals from ESPN; null if none */
+function matchGoals(x){ const g=(META[x.num]&&META[x.num].goals)||LIVEGOALS[x.num]; return (g&&g.length)?g:null; }
 function setScore(n,a,b){ if(a===""||b===""||a==null||b==null) delete SCORES[n]; else SCORES[n]={a:parseInt(a,10),b:parseInt(b,10)}; saveScores(); }
 
 /* ---- status ---- */
@@ -727,14 +730,14 @@ function centerHTML(x){
 }
 
 /* ---- goals + line-ups ---- */
-function goalsCardHTML(x){ const m=META[x.num]; if(!m||!m.goals) return "";
+function goalsCardHTML(x){ const goals=matchGoals(x); if(!goals) return "";
   const fmt=g=>`${g.p} ${g.m}${g.n?' '+goalNote(g.n):''}`;
-  const l=m.goals.filter(g=>g.t===1).map(fmt).join("<br>");
-  const r=m.goals.filter(g=>g.t===2).map(fmt).join("<br>");
+  const l=goals.filter(g=>g.t===1).map(fmt).join("<br>");
+  const r=goals.filter(g=>g.t===2).map(fmt).join("<br>");
   return `<div class="mc-goals"><div class="gl">${l||'—'}</div><span class="bl">⚽</span><div class="gr">${r||'—'}</div></div>`;
 }
-function goalsSheet(x){ const m=META[x.num]; if(!m||!m.goals) return "";
-  const rows=m.goals.map(g=>{ const tm=teamMeta(goalScorer(x,g));
+function goalsSheet(x){ const goals=matchGoals(x); if(!goals) return "";
+  const rows=goals.map(g=>{ const tm=teamMeta(goalScorer(x,g));
     return `<div class="goal"><span class="gm">${g.m}</span><span class="gf">${tm.flag}</span>
       <span class="gp">${g.p}${g.n?` <i>${goalNote(g.n)}</i>`:''}</span><span class="gball">⚽</span></div>`; }).join("");
   return `<div class="ssec"><div class="ssec-h">⚽ Goals</div><div class="goals">${rows}</div></div>`;
@@ -919,8 +922,8 @@ function buildBracket(){
 /* ---- top scorers (golden boot) ---- */
 function topScorers(){
   const tally={};
-  Object.keys(META).forEach(n=>{ const x=mByNum(+n), m=META[n]; if(!m.goals) return;
-    m.goals.forEach(g=>{ if(g.n==="OG") return; const team=goalScorer(x,g), key=g.p+"|"+team;
+  MATCHES.forEach(x=>{ const goals=matchGoals(x); if(!goals) return;
+    goals.forEach(g=>{ if(g.n==="OG") return; const team=goalScorer(x,g), key=g.p+"|"+team;
       if(!tally[key]) tally[key]={player:g.p,team,goals:0,pens:0};
       tally[key].goals++; if(g.n==="PEN") tally[key].pens++; });
   });
@@ -1006,9 +1009,9 @@ function setSync(s){ const el=$("#sync"); if(!el) return;
   else { el.innerHTML="○ OFFLINE"; el.style.color="var(--dim2)"; } }
 function rerenderAll(){ const sc=feed.scrollTop; buildFeed(); buildGroups(); buildScorers(); buildBracket(); feed.scrollTop=sc;
   if(sheetNum!=null && $("#sheet").classList.contains("open")) renderSheet(); }
-async function fetchLive(){
+async function fetchLive(offsets){
   const now=new Date();
-  const dts=[-1,0,1].map(o=>new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"})
+  const dts=(offsets||[-1,0,1]).map(o=>new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"})
     .format(new Date(now.getTime()+o*864e5)).replace(/-/g,""));
   let changed=false, ok=false;
   for(const dt of dts){
@@ -1017,7 +1020,9 @@ async function fetchLive(){
       if(!r.ok) continue; const j=await r.json(); ok=true;
       (j.events||[]).forEach(e=>{ const c=e.competitions&&e.competitions[0]; if(!c) return;
         const st=e.status&&e.status.type&&e.status.type.name;
-        const cs=(c.competitors||[]).map(z=>({t:espnTeam(z.team&&z.team.displayName),s:parseInt(z.score,10)}));
+        const comps=c.competitors||[];
+        const id2t={}; comps.forEach(z=>{ id2t[z.team&&z.team.id]=espnTeam(z.team&&z.team.displayName); });
+        const cs=comps.map(z=>({t:espnTeam(z.team&&z.team.displayName),s:parseInt(z.score,10)}));
         if(cs.length!==2||!cs[0].t||!cs[1].t) return;
         const m=findMatch(cs[0].t,cs[1].t); if(!m) return;
         const A=cs.find(z=>z.t===m.t1), B=cs.find(z=>z.t===m.t2); if(!A||!B) return;
@@ -1025,18 +1030,32 @@ async function fetchLive(){
         if((ft||live)&&!isNaN(A.s)&&!isNaN(B.s)){
           const nx={a:A.s,b:B.s,st:ft?"ft":"live"}, pv=LIVE[m.num];
           if(!pv||pv.a!==nx.a||pv.b!==nx.b||pv.st!==nx.st){ LIVE[m.num]=nx; changed=true; }
+          // live goalscorers from ESPN details — only when not already baked into META
+          if(!(META[m.num]&&META[m.num].goals)){
+            const gs=[];
+            (c.details||[]).forEach(dt=>{ if(!dt.scoringPlay) return;
+              const tc=id2t[dt.team&&dt.team.id], t=tc===m.t1?1:(tc===m.t2?2:null); if(!t) return;
+              const p=(dt.athletesInvolved&&dt.athletesInvolved[0]&&dt.athletesInvolved[0].displayName)||""; if(!p) return;
+              const g={t,p,m:(dt.clock&&dt.clock.displayValue)||""};
+              if(dt.ownGoal) g.n="OG"; else if(dt.penaltyKick) g.n="PEN";
+              gs.push(g);
+            });
+            if(JSON.stringify(LIVEGOALS[m.num]||null)!==JSON.stringify(gs.length?gs:null)){
+              if(gs.length) LIVEGOALS[m.num]=gs; else delete LIVEGOALS[m.num]; changed=true;
+            }
+          }
         }
       });
     }catch(e){}
   }
   setSync(ok?'live':'off');
-  if(changed){ try{ localStorage.setItem("wc2026live",JSON.stringify(LIVE)); }catch(e){} rerenderAll(); }
+  if(changed){ try{ localStorage.setItem("wc2026live",JSON.stringify(LIVE)); localStorage.setItem("wc2026livegoals",JSON.stringify(LIVEGOALS)); }catch(e){} rerenderAll(); }
 }
 
 /* ---- init ---- */
 buildDates(); buildFeed(); buildGroups(); buildScorers(); buildBracket(); clock(); setInterval(clock,30000);
 setTimeout(()=>jumpToday(false),120);
-fetchLive(); setInterval(fetchLive,60000);
+fetchLive([-5,-4,-3,-2,-1,0,1]); setInterval(()=>fetchLive([-1,0,1]),60000);
 </script>
 </body>
 </html>
