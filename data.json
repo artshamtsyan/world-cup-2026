@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-18T22:30:37.386Z",
+ "updated": "2026-06-19T00:27:08.446Z",
  "source": "football-data.org",
  "results": [
   {
@@ -183,12 +183,26 @@
    "hs": 4,
    "as": 1,
    "utc": "2026-06-18T19:00:00Z"
+  },
+  {
+   "home": "Canada",
+   "away": "Qatar",
+   "hs": 6,
+   "as": 0,
+   "utc": "2026-06-18T22:00:00Z"
   }
  ],
  "scorers": [
   {
    "name": "Lionel Messi",
    "team": "Argentina",
+   "goals": 3,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Jonathan David",
+   "team": "Canada",
    "goals": 3,
    "pens": 0,
    "assists": 0
@@ -595,13 +609,6 @@
   {
    "name": "Caleb Yirenkyi",
    "team": "Ghana",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Daniel Muñoz",
-   "team": "Colombia",
    "goals": 1,
    "pens": 0,
    "assists": 0
