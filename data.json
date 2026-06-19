@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-19T05:35:00.565Z",
+ "updated": "2026-06-19T21:45:15.475Z",
  "source": "football-data.org",
  "results": [
   {
@@ -197,6 +197,13 @@
    "hs": 1,
    "as": 0,
    "utc": "2026-06-19T01:00:00Z"
+  },
+  {
+   "home": "United States",
+   "away": "Australia",
+   "hs": 2,
+   "as": 0,
+   "utc": "2026-06-19T19:00:00Z"
   }
  ],
  "scorers": [
