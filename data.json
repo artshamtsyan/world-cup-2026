@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-19T00:27:08.446Z",
+ "updated": "2026-06-19T05:35:00.565Z",
  "source": "football-data.org",
  "results": [
   {
@@ -190,6 +190,13 @@
    "hs": 6,
    "as": 0,
    "utc": "2026-06-18T22:00:00Z"
+  },
+  {
+   "home": "Mexico",
+   "away": "South Korea",
+   "hs": 1,
+   "as": 0,
+   "utc": "2026-06-19T01:00:00Z"
   }
  ],
  "scorers": [
