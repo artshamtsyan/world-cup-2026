@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-20T20:15:01.282Z",
+ "updated": "2026-06-20T21:47:26.455Z",
  "source": "football-data.org",
  "results": [
   {
@@ -285,6 +285,13 @@
    "assists": 0
   },
   {
+   "name": "Deniz Undav",
+   "team": "Germany",
+   "goals": 2,
+   "pens": 0,
+   "assists": 2
+  },
+  {
    "name": "Yasin Ayari",
    "team": "Sweden",
    "goals": 2,
@@ -472,13 +479,6 @@
    "goals": 1,
    "pens": 0,
    "assists": 1
-  },
-  {
-   "name": "Deniz Undav",
-   "team": "Germany",
-   "goals": 1,
-   "pens": 0,
-   "assists": 2
   },
   {
    "name": "Virgil van Dijk",
