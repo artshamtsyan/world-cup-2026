@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-20T15:03:23.899Z",
+ "updated": "2026-06-20T18:54:37.621Z",
  "source": "football-data.org",
  "results": [
   {
@@ -327,6 +327,20 @@
    "assists": 0
   },
   {
+   "name": "Brian Brobbey",
+   "team": "Netherlands",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Cody Gakpo",
+   "team": "Netherlands",
+   "goals": 2,
+   "pens": 0,
+   "assists": 2
+  },
+  {
    "name": "Julián Quiñones",
    "team": "Mexico",
    "goals": 1,
@@ -478,7 +492,7 @@
    "team": "Netherlands",
    "goals": 1,
    "pens": 0,
-   "assists": 0
+   "assists": 1
   },
   {
    "name": "Daichi Kamada",
@@ -499,7 +513,7 @@
    "team": "Sweden",
    "goals": 1,
    "pens": 0,
-   "assists": 2
+   "assists": 3
   },
   {
    "name": "Omar Rekik",
@@ -630,20 +644,6 @@
   {
    "name": "Petar Musa",
    "team": "Croatia",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Jude Bellingham",
-   "team": "England",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Marcus Rashford",
-   "team": "England",
    "goals": 1,
    "pens": 0,
    "assists": 0
