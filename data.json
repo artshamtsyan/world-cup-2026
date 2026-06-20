@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-19T22:58:10.812Z",
+ "updated": "2026-06-20T00:16:40.593Z",
  "source": "football-data.org",
  "results": [
   {
@@ -204,6 +204,13 @@
    "hs": 2,
    "as": 0,
    "utc": "2026-06-19T19:00:00Z"
+  },
+  {
+   "home": "Scotland",
+   "away": "Morocco",
+   "hs": 0,
+   "as": 1,
+   "utc": "2026-06-19T22:00:00Z"
   }
  ],
  "scorers": [
