@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-20T18:54:37.621Z",
+ "updated": "2026-06-20T20:15:01.282Z",
  "source": "football-data.org",
  "results": [
   {
@@ -225,6 +225,13 @@
    "hs": 0,
    "as": 1,
    "utc": "2026-06-20T03:00:00Z"
+  },
+  {
+   "home": "Netherlands",
+   "away": "Sweden",
+   "hs": 5,
+   "as": 1,
+   "utc": "2026-06-20T17:00:00Z"
   }
  ],
  "scorers": [
