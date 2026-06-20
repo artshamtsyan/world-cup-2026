@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-20T21:47:26.455Z",
+ "updated": "2026-06-20T23:09:30.224Z",
  "source": "football-data.org",
  "results": [
   {
@@ -232,9 +232,23 @@
    "hs": 5,
    "as": 1,
    "utc": "2026-06-20T17:00:00Z"
+  },
+  {
+   "home": "Germany",
+   "away": "Ivory Coast",
+   "hs": 2,
+   "as": 1,
+   "utc": "2026-06-20T20:00:00Z"
   }
  ],
  "scorers": [
+  {
+   "name": "Deniz Undav",
+   "team": "Germany",
+   "goals": 3,
+   "pens": 0,
+   "assists": 2
+  },
   {
    "name": "Lionel Messi",
    "team": "Argentina",
@@ -283,13 +297,6 @@
    "goals": 2,
    "pens": 1,
    "assists": 0
-  },
-  {
-   "name": "Deniz Undav",
-   "team": "Germany",
-   "goals": 2,
-   "pens": 0,
-   "assists": 2
   },
   {
    "name": "Yasin Ayari",
@@ -450,7 +457,7 @@
    "team": "Germany",
    "goals": 1,
    "pens": 0,
-   "assists": 0
+   "assists": 1
   },
   {
    "name": "Livano Comenencia",
