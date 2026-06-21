@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-21T20:52:33.560Z",
+ "updated": "2026-06-21T22:15:13.406Z",
  "source": "football-data.org",
  "results": [
   {
@@ -260,6 +260,13 @@
    "hs": 4,
    "as": 0,
    "utc": "2026-06-21T16:00:00Z"
+  },
+  {
+   "home": "Belgium",
+   "away": "Iran",
+   "hs": 0,
+   "as": 0,
+   "utc": "2026-06-21T19:00:00Z"
   }
  ],
  "scorers": [
