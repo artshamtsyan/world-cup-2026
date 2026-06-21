@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-20T23:09:30.224Z",
+ "updated": "2026-06-21T06:59:17.068Z",
  "source": "football-data.org",
  "results": [
   {
@@ -239,6 +239,20 @@
    "hs": 2,
    "as": 1,
    "utc": "2026-06-20T20:00:00Z"
+  },
+  {
+   "home": "Ecuador",
+   "away": "Curaçao",
+   "hs": 0,
+   "as": 0,
+   "utc": "2026-06-21T00:00:00Z"
+  },
+  {
+   "home": "Tunisia",
+   "away": "Japan",
+   "hs": 0,
+   "as": 4,
+   "utc": "2026-06-21T04:00:00Z"
   }
  ],
  "scorers": [
@@ -296,6 +310,13 @@
    "team": "Germany",
    "goals": 2,
    "pens": 1,
+   "assists": 0
+  },
+  {
+   "name": "Daichi Kamada",
+   "team": "Japan",
+   "goals": 2,
+   "pens": 0,
    "assists": 0
   },
   {
@@ -360,6 +381,13 @@
    "goals": 2,
    "pens": 0,
    "assists": 2
+  },
+  {
+   "name": "Ayase Ueda",
+   "team": "Japan",
+   "goals": 2,
+   "pens": 0,
+   "assists": 1
   },
   {
    "name": "Julián Quiñones",
@@ -499,7 +527,7 @@
    "team": "Japan",
    "goals": 1,
    "pens": 0,
-   "assists": 0
+   "assists": 1
   },
   {
    "name": "Crysencio Summerville",
@@ -507,13 +535,6 @@
    "goals": 1,
    "pens": 0,
    "assists": 1
-  },
-  {
-   "name": "Daichi Kamada",
-   "team": "Japan",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
   },
   {
    "name": "Amad Diallo",
@@ -650,13 +671,6 @@
   },
   {
    "name": "Martin Baturina",
-   "team": "Croatia",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Petar Musa",
    "team": "Croatia",
    "goals": 1,
    "pens": 0,
