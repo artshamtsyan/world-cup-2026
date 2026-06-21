@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-21T22:15:13.406Z",
+ "updated": "2026-06-21T23:51:10.761Z",
  "source": "football-data.org",
  "results": [
   {
@@ -341,6 +341,13 @@
    "assists": 0
   },
   {
+   "name": "Maximiliano Araújo",
+   "team": "Uruguay",
+   "goals": 2,
+   "pens": 0,
+   "assists": 1
+  },
+  {
    "name": "Elijah Just",
    "team": "New Zealand",
    "goals": 2,
@@ -602,13 +609,6 @@
   {
    "name": "Abdulelah Al Amri",
    "team": "Saudi Arabia",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Maximiliano Araújo",
-   "team": "Uruguay",
    "goals": 1,
    "pens": 0,
    "assists": 0
