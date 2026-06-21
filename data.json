@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-21T15:26:01.717Z",
+ "updated": "2026-06-21T17:05:50.720Z",
  "source": "football-data.org",
  "results": [
   {
@@ -15,6 +15,13 @@
    "hs": 2,
    "as": 1,
    "utc": "2026-06-12T02:00:00Z"
+  },
+  {
+   "home": "Canada",
+   "away": "Bosnia-Herzegovina",
+   "hs": 1,
+   "as": 1,
+   "utc": "2026-06-12T19:00:00Z"
   },
   {
    "home": "United States",
@@ -383,6 +390,13 @@
    "assists": 1
   },
   {
+   "name": "Mikel Oyarzabal",
+   "team": "Spain",
+   "goals": 2,
+   "pens": 0,
+   "assists": 1
+  },
+  {
    "name": "Julián Quiñones",
    "team": "Mexico",
    "goals": 1,
@@ -658,13 +672,6 @@
   {
    "name": "Yoane Wissa",
    "team": "Congo DR",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Martin Baturina",
-   "team": "Croatia",
    "goals": 1,
    "pens": 0,
    "assists": 0
