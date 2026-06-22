@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-21T23:51:10.761Z",
+ "updated": "2026-06-22T04:16:14.454Z",
  "source": "football-data.org",
  "results": [
   {
@@ -267,6 +267,20 @@
    "hs": 0,
    "as": 0,
    "utc": "2026-06-21T19:00:00Z"
+  },
+  {
+   "home": "Uruguay",
+   "away": "Cape Verde Islands",
+   "hs": 2,
+   "as": 2,
+   "utc": "2026-06-21T22:00:00Z"
+  },
+  {
+   "home": "New Zealand",
+   "away": "Egypt",
+   "hs": 1,
+   "as": 3,
+   "utc": "2026-06-22T01:00:00Z"
   }
  ],
  "scorers": [
