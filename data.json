@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-22T21:39:19.593Z",
+ "updated": "2026-06-23T01:30:42.662Z",
  "source": "football-data.org",
  "results": [
   {
@@ -288,6 +288,13 @@
    "hs": 2,
    "as": 0,
    "utc": "2026-06-22T17:00:00Z"
+  },
+  {
+   "home": "France",
+   "away": "Iraq",
+   "hs": 3,
+   "as": 0,
+   "utc": "2026-06-22T21:00:00Z"
   }
  ],
  "scorers": [
@@ -299,18 +306,25 @@
    "assists": 0
   },
   {
+   "name": "Kylian Mbappé",
+   "team": "France",
+   "goals": 4,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Erling Haaland",
+   "team": "Norway",
+   "goals": 4,
+   "pens": 0,
+   "assists": 0
+  },
+  {
    "name": "Deniz Undav",
    "team": "Germany",
    "goals": 3,
    "pens": 0,
    "assists": 2
-  },
-  {
-   "name": "Kylian Mbappé",
-   "team": "France",
-   "goals": 3,
-   "pens": 0,
-   "assists": 0
   },
   {
    "name": "Jonathan David",
@@ -378,13 +392,6 @@
   {
    "name": "Elijah Just",
    "team": "New Zealand",
-   "goals": 2,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Erling Haaland",
-   "team": "Norway",
    "goals": 2,
    "pens": 0,
    "assists": 0
