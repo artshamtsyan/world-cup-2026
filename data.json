@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-23T18:20:17.694Z",
+ "updated": "2026-06-23T20:32:53.019Z",
  "source": "football-data.org",
  "results": [
   {
@@ -309,6 +309,13 @@
    "hs": 1,
    "as": 2,
    "utc": "2026-06-23T03:00:00Z"
+  },
+  {
+   "home": "Portugal",
+   "away": "Uzbekistan",
+   "hs": 5,
+   "as": 0,
+   "utc": "2026-06-23T17:00:00Z"
   }
  ],
  "scorers": [
@@ -469,13 +476,6 @@
   {
    "name": "Ismaïla Sarr",
    "team": "Senegal",
-   "goals": 2,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Cristiano Ronaldo",
-   "team": "Portugal",
    "goals": 2,
    "pens": 0,
    "assists": 0
@@ -730,6 +730,13 @@
    "team": "Austria",
    "goals": 1,
    "pens": 1,
+   "assists": 0
+  },
+  {
+   "name": "Joao Neves",
+   "team": "Portugal",
+   "goals": 1,
+   "pens": 0,
    "assists": 0
   }
  ]
