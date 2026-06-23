@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-23T01:30:42.662Z",
+ "updated": "2026-06-23T06:07:50.864Z",
  "source": "football-data.org",
  "results": [
   {
@@ -295,6 +295,20 @@
    "hs": 3,
    "as": 0,
    "utc": "2026-06-22T21:00:00Z"
+  },
+  {
+   "home": "Norway",
+   "away": "Senegal",
+   "hs": 3,
+   "as": 2,
+   "utc": "2026-06-23T00:00:00Z"
+  },
+  {
+   "home": "Jordan",
+   "away": "Algeria",
+   "hs": 1,
+   "as": 2,
+   "utc": "2026-06-23T03:00:00Z"
   }
  ],
  "scorers": [
@@ -444,6 +458,13 @@
    "goals": 2,
    "pens": 0,
    "assists": 1
+  },
+  {
+   "name": "Ismaïla Sarr",
+   "team": "Senegal",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
   },
   {
    "name": "Julián Quiñones",
@@ -707,13 +728,6 @@
   {
    "name": "Joao Neves",
    "team": "Portugal",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Yoane Wissa",
-   "team": "Congo DR",
    "goals": 1,
    "pens": 0,
    "assists": 0
