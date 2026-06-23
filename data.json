@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-23T06:07:50.864Z",
+ "updated": "2026-06-23T13:21:31.759Z",
  "source": "football-data.org",
  "results": [
   {
@@ -383,6 +383,13 @@
    "assists": 0
   },
   {
+   "name": "Crysencio Summerville",
+   "team": "Netherlands",
+   "goals": 2,
+   "pens": 0,
+   "assists": 1
+  },
+  {
    "name": "Daichi Kamada",
    "team": "Japan",
    "goals": 2,
@@ -443,7 +450,7 @@
    "team": "Netherlands",
    "goals": 2,
    "pens": 0,
-   "assists": 2
+   "assists": 1
   },
   {
    "name": "Ayase Ueda",
@@ -602,13 +609,6 @@
   {
    "name": "Keito Nakamura",
    "team": "Japan",
-   "goals": 1,
-   "pens": 0,
-   "assists": 1
-  },
-  {
-   "name": "Crysencio Summerville",
-   "team": "Netherlands",
    "goals": 1,
    "pens": 0,
    "assists": 1
