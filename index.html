@@ -1018,9 +1018,12 @@ function topScorers(){
 }
 function buildScorers(){
   const wrap=$("#scorers");
-  let list = (FDSCORERS&&FDSCORERS.length)
+  const baked=topScorers();
+  const fdList=(FDSCORERS&&FDSCORERS.length)
     ? FDSCORERS.map(s=>({player:s.name,team:espnTeam(s.team)||s.team,goals:s.goals,pens:s.pens})).filter(s=>s.goals>0)
-    : topScorers();
+    : [];
+  const sum=l=>l.reduce((n,s)=>n+s.goals,0);
+  let list = sum(fdList)>sum(baked) ? fdList : baked;   // use whichever source is more complete
   list=list.slice().sort((a,b)=>b.goals-a.goals||(a.player<b.player?-1:1));
   if(!list.length){ wrap.innerHTML='<div class="lineNote">No goals recorded yet.</div>'; return; }
   wrap.innerHTML=list.map(s=>{ const t=teamMeta(s.team), rank=list.filter(o=>o.goals>s.goals).length+1, lead=rank===1;
