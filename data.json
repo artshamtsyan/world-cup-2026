@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-24T21:27:12.770Z",
+ "updated": "2026-06-24T22:48:46.365Z",
  "source": "football-data.org",
  "results": [
   {
@@ -376,6 +376,20 @@
    "assists": 0
   },
   {
+   "name": "Ismael Saibari",
+   "team": "Morocco",
+   "goals": 3,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Vinicius Junior",
+   "team": "Brazil",
+   "goals": 3,
+   "pens": 0,
+   "assists": 1
+  },
+  {
    "name": "Deniz Undav",
    "team": "Germany",
    "goals": 3,
@@ -409,20 +423,6 @@
    "goals": 2,
    "pens": 0,
    "assists": 0
-  },
-  {
-   "name": "Ismael Saibari",
-   "team": "Morocco",
-   "goals": 2,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Vinicius Junior",
-   "team": "Brazil",
-   "goals": 2,
-   "pens": 0,
-   "assists": 1
   },
   {
    "name": "Kai Havertz",
