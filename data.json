@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-25T11:15:33.639Z",
+ "updated": "2026-06-25T22:25:07.846Z",
  "source": "football-data.org",
  "results": [
   {
@@ -379,6 +379,20 @@
    "hs": 1,
    "as": 0,
    "utc": "2026-06-25T01:00:00Z"
+  },
+  {
+   "home": "Ecuador",
+   "away": "Germany",
+   "hs": 2,
+   "as": 1,
+   "utc": "2026-06-25T20:00:00Z"
+  },
+  {
+   "home": "Curaçao",
+   "away": "Ivory Coast",
+   "hs": 0,
+   "as": 2,
+   "utc": "2026-06-25T20:00:00Z"
   }
  ],
  "scorers": [
@@ -574,6 +588,13 @@
   {
    "name": "Cristiano Ronaldo",
    "team": "Portugal",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Nicolas Pépé",
+   "team": "Ivory Coast",
    "goals": 2,
    "pens": 0,
    "assists": 0
@@ -791,13 +812,6 @@
   {
    "name": "Aymen Hussein",
    "team": "Iraq",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Leo Østigård",
-   "team": "Norway",
    "goals": 1,
    "pens": 0,
    "assists": 0
