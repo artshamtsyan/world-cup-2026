@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-26T07:53:24.398Z",
+ "updated": "2026-06-26T19:48:25.491Z",
  "source": "football-data.org",
  "results": [
   {
@@ -443,7 +443,7 @@
    "team": "France",
    "goals": 4,
    "pens": 0,
-   "assists": 0
+   "assists": 2
   },
   {
    "name": "Erling Haaland",
@@ -451,6 +451,13 @@
    "goals": 4,
    "pens": 0,
    "assists": 0
+  },
+  {
+   "name": "Ousmane Dembélé",
+   "team": "France",
+   "goals": 4,
+   "pens": 0,
+   "assists": 1
   },
   {
    "name": "Ismael Saibari",
@@ -833,13 +840,6 @@
   {
    "name": "Bradley Barcola",
    "team": "France",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Ibrahim M'Baye",
-   "team": "Senegal",
    "goals": 1,
    "pens": 0,
    "assists": 0
