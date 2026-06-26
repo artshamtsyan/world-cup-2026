@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-25T23:52:36.868Z",
+ "updated": "2026-06-26T03:42:15.326Z",
  "source": "football-data.org",
  "results": [
   {
@@ -393,6 +393,20 @@
    "hs": 0,
    "as": 2,
    "utc": "2026-06-25T20:00:00Z"
+  },
+  {
+   "home": "Tunisia",
+   "away": "Netherlands",
+   "hs": 1,
+   "as": 3,
+   "utc": "2026-06-25T23:00:00Z"
+  },
+  {
+   "home": "Japan",
+   "away": "Sweden",
+   "hs": 1,
+   "as": 1,
+   "utc": "2026-06-25T23:00:00Z"
   }
  ],
  "scorers": [
@@ -563,6 +577,13 @@
    "goals": 2,
    "pens": 0,
    "assists": 1
+  },
+  {
+   "name": "Anthony Elanga",
+   "team": "Sweden",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
   },
   {
    "name": "Ayase Ueda",
@@ -758,7 +779,7 @@
    "team": "Sweden",
    "goals": 1,
    "pens": 0,
-   "assists": 1
+   "assists": 2
   },
   {
    "name": "Mattias Svanberg",
@@ -805,13 +826,6 @@
   {
    "name": "Ibrahim M'Baye",
    "team": "Senegal",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Aymen Hussein",
-   "team": "Iraq",
    "goals": 1,
    "pens": 0,
    "assists": 0
