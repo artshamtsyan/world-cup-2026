@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-27T07:49:18.416Z",
+ "updated": "2026-06-27T22:35:54.334Z",
  "source": "football-data.org",
  "results": [
   {
@@ -523,6 +523,13 @@
    "assists": 0
   },
   {
+   "name": "Harry Kane",
+   "team": "England",
+   "goals": 3,
+   "pens": 1,
+   "assists": 0
+  },
+  {
    "name": "Johan Manzambi",
    "team": "Switzerland",
    "goals": 3,
@@ -621,11 +628,11 @@
    "assists": 1
   },
   {
-   "name": "Harry Kane",
+   "name": "Jude Bellingham",
    "team": "England",
    "goals": 2,
-   "pens": 1,
-   "assists": 0
+   "pens": 0,
+   "assists": 1
   },
   {
    "name": "Daniel Muñoz",
@@ -875,13 +882,6 @@
   {
    "name": "Emam Ashour",
    "team": "Egypt",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Abdulelah Al Amri",
-   "team": "Saudi Arabia",
    "goals": 1,
    "pens": 0,
    "assists": 0
