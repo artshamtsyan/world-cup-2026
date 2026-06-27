@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-27T04:34:37.067Z",
+ "updated": "2026-06-27T07:49:18.416Z",
  "source": "football-data.org",
  "results": [
   {
@@ -449,6 +449,20 @@
    "hs": 0,
    "as": 0,
    "utc": "2026-06-27T00:00:00Z"
+  },
+  {
+   "home": "New Zealand",
+   "away": "Belgium",
+   "hs": 1,
+   "as": 5,
+   "utc": "2026-06-27T03:00:00Z"
+  },
+  {
+   "home": "Egypt",
+   "away": "Iran",
+   "hs": 1,
+   "as": 1,
+   "utc": "2026-06-27T03:00:00Z"
   }
  ],
  "scorers": [
@@ -500,6 +514,13 @@
    "goals": 3,
    "pens": 0,
    "assists": 2
+  },
+  {
+   "name": "Elijah Just",
+   "team": "New Zealand",
+   "goals": 3,
+   "pens": 0,
+   "assists": 0
   },
   {
    "name": "Johan Manzambi",
@@ -591,13 +612,6 @@
    "goals": 2,
    "pens": 0,
    "assists": 1
-  },
-  {
-   "name": "Elijah Just",
-   "team": "New Zealand",
-   "goals": 2,
-   "pens": 0,
-   "assists": 0
   },
   {
    "name": "Ramin Rezaeian",
