@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-26T21:19:26.199Z",
+ "updated": "2026-06-27T04:34:37.067Z",
  "source": "football-data.org",
  "results": [
   {
@@ -435,6 +435,20 @@
    "hs": 5,
    "as": 0,
    "utc": "2026-06-26T19:00:00Z"
+  },
+  {
+   "home": "Uruguay",
+   "away": "Spain",
+   "hs": 0,
+   "as": 1,
+   "utc": "2026-06-27T00:00:00Z"
+  },
+  {
+   "home": "Cape Verde Islands",
+   "away": "Saudi Arabia",
+   "hs": 0,
+   "as": 0,
+   "utc": "2026-06-27T00:00:00Z"
   }
  ],
  "scorers": [
@@ -586,6 +600,13 @@
    "assists": 0
   },
   {
+   "name": "Ramin Rezaeian",
+   "team": "Iran",
+   "goals": 2,
+   "pens": 0,
+   "assists": 1
+  },
+  {
    "name": "Harry Kane",
    "team": "England",
    "goals": 2,
@@ -661,6 +682,13 @@
    "goals": 2,
    "pens": 0,
    "assists": 1
+  },
+  {
+   "name": "Leandro Trossard",
+   "team": "Belgium",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
   },
   {
    "name": "Raúl Jiménez",
@@ -840,20 +868,6 @@
   {
    "name": "Abdulelah Al Amri",
    "team": "Saudi Arabia",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Ramin Rezaeian",
-   "team": "Iran",
-   "goals": 1,
-   "pens": 0,
-   "assists": 1
-  },
-  {
-   "name": "Mohammad Mohebi",
-   "team": "Iran",
    "goals": 1,
    "pens": 0,
    "assists": 0
