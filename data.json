@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-28T00:02:38.732Z",
+ "updated": "2026-06-28T05:01:35.609Z",
  "source": "football-data.org",
  "results": [
   {
@@ -477,13 +477,41 @@
    "hs": 2,
    "as": 1,
    "utc": "2026-06-27T21:00:00Z"
+  },
+  {
+   "home": "Colombia",
+   "away": "Portugal",
+   "hs": 0,
+   "as": 0,
+   "utc": "2026-06-27T23:30:00Z"
+  },
+  {
+   "home": "Congo DR",
+   "away": "Uzbekistan",
+   "hs": 3,
+   "as": 1,
+   "utc": "2026-06-27T23:30:00Z"
+  },
+  {
+   "home": "Jordan",
+   "away": "Argentina",
+   "hs": 1,
+   "as": 3,
+   "utc": "2026-06-28T02:00:00Z"
+  },
+  {
+   "home": "Algeria",
+   "away": "Austria",
+   "hs": 3,
+   "as": 3,
+   "utc": "2026-06-28T02:00:00Z"
   }
  ],
  "scorers": [
   {
    "name": "Lionel Messi",
    "team": "Argentina",
-   "goals": 5,
+   "goals": 6,
    "pens": 0,
    "assists": 0
   },
@@ -534,6 +562,13 @@
    "team": "New Zealand",
    "goals": 3,
    "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Yoane Wissa",
+   "team": "Congo DR",
+   "goals": 3,
+   "pens": 1,
    "assists": 0
   },
   {
@@ -642,6 +677,13 @@
    "assists": 1
   },
   {
+   "name": "Marko Arnautovic",
+   "team": "Austria",
+   "goals": 2,
+   "pens": 1,
+   "assists": 0
+  },
+  {
    "name": "Jude Bellingham",
    "team": "England",
    "goals": 2,
@@ -724,6 +766,13 @@
    "goals": 2,
    "pens": 0,
    "assists": 0
+  },
+  {
+   "name": "Riyad Mahrez",
+   "team": "Algeria",
+   "goals": 2,
+   "pens": 0,
+   "assists": 2
   },
   {
    "name": "Raúl Jiménez",
@@ -875,27 +924,6 @@
   {
    "name": "Omar Rekik",
    "team": "Tunisia",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Viktor Gyökeres",
-   "team": "Sweden",
-   "goals": 1,
-   "pens": 0,
-   "assists": 2
-  },
-  {
-   "name": "Mattias Svanberg",
-   "team": "Sweden",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Emam Ashour",
-   "team": "Egypt",
    "goals": 1,
    "pens": 0,
    "assists": 0
