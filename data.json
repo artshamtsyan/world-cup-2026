@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-27T22:35:54.334Z",
+ "updated": "2026-06-28T00:02:38.732Z",
  "source": "football-data.org",
  "results": [
   {
@@ -463,6 +463,20 @@
    "hs": 1,
    "as": 1,
    "utc": "2026-06-27T03:00:00Z"
+  },
+  {
+   "home": "Panama",
+   "away": "England",
+   "hs": 0,
+   "as": 2,
+   "utc": "2026-06-27T21:00:00Z"
+  },
+  {
+   "home": "Croatia",
+   "away": "Ghana",
+   "hs": 2,
+   "as": 1,
+   "utc": "2026-06-27T21:00:00Z"
   }
  ],
  "scorers": [
