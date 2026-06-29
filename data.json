@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-28T22:02:17.362Z",
+ "updated": "2026-06-29T21:08:22.378Z",
  "source": "football-data.org",
  "results": [
   {
@@ -512,6 +512,13 @@
    "hs": 0,
    "as": 1,
    "utc": "2026-06-28T19:00:00Z"
+  },
+  {
+   "home": "Brazil",
+   "away": "Japan",
+   "hs": 2,
+   "as": 1,
+   "utc": "2026-06-29T17:00:00Z"
   }
  ],
  "scorers": [
