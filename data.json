@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-29T21:08:22.378Z",
+ "updated": "2026-06-29T22:36:40.361Z",
  "source": "football-data.org",
  "results": [
   {
@@ -565,6 +565,13 @@
    "assists": 0
   },
   {
+   "name": "Kai Havertz",
+   "team": "Germany",
+   "goals": 3,
+   "pens": 1,
+   "assists": 0
+  },
+  {
    "name": "Deniz Undav",
    "team": "Germany",
    "goals": 3,
@@ -646,13 +653,6 @@
    "team": "United States",
    "goals": 2,
    "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Kai Havertz",
-   "team": "Germany",
-   "goals": 2,
-   "pens": 1,
    "assists": 0
   },
   {
