@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-30T20:58:01.623Z",
+ "updated": "2026-06-30T22:19:24.984Z",
  "source": "football-data.org",
  "results": [
   {
@@ -551,6 +551,13 @@
    "assists": 0
   },
   {
+   "name": "Kylian Mbappé",
+   "team": "France",
+   "goals": 5,
+   "pens": 0,
+   "assists": 2
+  },
+  {
    "name": "Erling Haaland",
    "team": "Norway",
    "goals": 5,
@@ -565,18 +572,11 @@
    "assists": 1
   },
   {
-   "name": "Kylian Mbappé",
-   "team": "France",
-   "goals": 4,
-   "pens": 0,
-   "assists": 2
-  },
-  {
    "name": "Ousmane Dembélé",
    "team": "France",
    "goals": 4,
    "pens": 0,
-   "assists": 1
+   "assists": 2
   },
   {
    "name": "Ismael Saibari",
@@ -721,6 +721,13 @@
   {
    "name": "Ramin Rezaeian",
    "team": "Iran",
+   "goals": 2,
+   "pens": 0,
+   "assists": 1
+  },
+  {
+   "name": "Bradley Barcola",
+   "team": "France",
    "goals": 2,
    "pens": 0,
    "assists": 1
@@ -955,13 +962,6 @@
    "goals": 1,
    "pens": 0,
    "assists": 3
-  },
-  {
-   "name": "Omar Rekik",
-   "team": "Tunisia",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
   }
  ]
 }
