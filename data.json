@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-30T22:19:24.984Z",
+ "updated": "2026-06-30T23:44:22.236Z",
  "source": "football-data.org",
  "results": [
   {
@@ -540,22 +540,29 @@
    "hs": 1,
    "as": 2,
    "utc": "2026-06-30T17:00:00Z"
+  },
+  {
+   "home": "France",
+   "away": "Sweden",
+   "hs": 3,
+   "as": 0,
+   "utc": "2026-06-30T21:00:00Z"
   }
  ],
  "scorers": [
+  {
+   "name": "Kylian Mbappé",
+   "team": "France",
+   "goals": 6,
+   "pens": 0,
+   "assists": 2
+  },
   {
    "name": "Lionel Messi",
    "team": "Argentina",
    "goals": 6,
    "pens": 0,
    "assists": 0
-  },
-  {
-   "name": "Kylian Mbappé",
-   "team": "France",
-   "goals": 5,
-   "pens": 0,
-   "assists": 2
   },
   {
    "name": "Erling Haaland",
