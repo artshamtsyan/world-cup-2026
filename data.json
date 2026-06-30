@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-29T22:36:40.361Z",
+ "updated": "2026-06-30T00:04:18.224Z",
  "source": "football-data.org",
  "results": [
   {
@@ -519,6 +519,13 @@
    "hs": 2,
    "as": 1,
    "utc": "2026-06-29T17:00:00Z"
+  },
+  {
+   "home": "Germany",
+   "away": "Paraguay",
+   "hs": 5,
+   "as": 6,
+   "utc": "2026-06-29T20:30:00Z"
   }
  ],
  "scorers": [
