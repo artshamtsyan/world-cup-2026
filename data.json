@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-30T18:56:26.831Z",
+ "updated": "2026-06-30T20:58:01.623Z",
  "source": "football-data.org",
  "results": [
   {
@@ -533,6 +533,13 @@
    "hs": 3,
    "as": 4,
    "utc": "2026-06-30T01:00:00Z"
+  },
+  {
+   "home": "Ivory Coast",
+   "away": "Norway",
+   "hs": 1,
+   "as": 2,
+   "utc": "2026-06-30T17:00:00Z"
   }
  ],
  "scorers": [
