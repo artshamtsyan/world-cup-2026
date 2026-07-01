@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-01T03:55:37.579Z",
+ "updated": "2026-07-01T08:15:16.784Z",
  "source": "football-data.org",
  "results": [
   {
@@ -547,6 +547,13 @@
    "hs": 3,
    "as": 0,
    "utc": "2026-06-30T21:00:00Z"
+  },
+  {
+   "home": "Mexico",
+   "away": "Ecuador",
+   "hs": 2,
+   "as": 0,
+   "utc": "2026-07-01T01:00:00Z"
   }
  ],
  "scorers": [
