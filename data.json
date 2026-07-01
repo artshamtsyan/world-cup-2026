@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-01T08:15:16.784Z",
+ "updated": "2026-07-01T19:17:56.227Z",
  "source": "football-data.org",
  "results": [
   {
@@ -554,6 +554,13 @@
    "hs": 2,
    "as": 0,
    "utc": "2026-07-01T01:00:00Z"
+  },
+  {
+   "home": "England",
+   "away": "Congo DR",
+   "hs": 2,
+   "as": 1,
+   "utc": "2026-07-01T16:00:00Z"
   }
  ],
  "scorers": [
@@ -576,6 +583,13 @@
    "team": "Norway",
    "goals": 5,
    "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Harry Kane",
+   "team": "England",
+   "goals": 5,
+   "pens": 1,
    "assists": 0
   },
   {
@@ -630,13 +644,6 @@
   {
    "name": "Yoane Wissa",
    "team": "Congo DR",
-   "goals": 3,
-   "pens": 1,
-   "assists": 0
-  },
-  {
-   "name": "Harry Kane",
-   "team": "England",
    "goals": 3,
    "pens": 1,
    "assists": 0
