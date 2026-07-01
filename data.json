@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-01T19:17:56.227Z",
+ "updated": "2026-07-01T21:06:34.356Z",
  "source": "football-data.org",
  "results": [
   {
@@ -831,6 +831,13 @@
    "assists": 1
   },
   {
+   "name": "Habib Diarra",
+   "team": "Senegal",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
    "name": "Pape Gueye",
    "team": "Senegal",
    "goals": 2,
@@ -976,13 +983,6 @@
    "goals": 1,
    "pens": 0,
    "assists": 1
-  },
-  {
-   "name": "Alexander Isak",
-   "team": "Sweden",
-   "goals": 1,
-   "pens": 0,
-   "assists": 3
   }
  ]
 }
