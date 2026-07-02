@@ -13,7 +13,9 @@ const m = await j(`${base}/matches`);
 const s = await j(`${base}/scorers?limit=60`);
 
 const results = (m.matches || [])
-  .filter(x => x.status === 'FINISHED' && x.score?.fullTime?.home != null)
+  // skip penalty-shootout matches — football-data's fullTime is unreliable for them;
+  // the app's ESPN overlay handles shootouts (regulation score + who won on pens).
+  .filter(x => x.status === 'FINISHED' && x.score?.fullTime?.home != null && x.score?.duration !== 'PENALTY_SHOOTOUT')
   .map(x => ({ home: x.homeTeam.name, away: x.awayTeam.name,
                hs: x.score.fullTime.home, as: x.score.fullTime.away, utc: x.utcDate }));
 
