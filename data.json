@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-01T22:46:51.434Z",
+ "updated": "2026-07-02T00:07:06.353Z",
  "source": "football-data.org",
  "results": [
   {
@@ -561,6 +561,13 @@
    "hs": 2,
    "as": 1,
    "utc": "2026-07-01T16:00:00Z"
+  },
+  {
+   "home": "Belgium",
+   "away": "Senegal",
+   "hs": 3,
+   "as": 2,
+   "utc": "2026-07-01T20:00:00Z"
   }
  ],
  "scorers": [
