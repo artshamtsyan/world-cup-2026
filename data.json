@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-02T20:41:30.661Z",
+ "updated": "2026-07-02T22:06:05.943Z",
  "source": "football-data.org",
  "results": [
   {
@@ -561,6 +561,13 @@
    "hs": 2,
    "as": 0,
    "utc": "2026-07-02T00:00:00Z"
+  },
+  {
+   "home": "Spain",
+   "away": "Austria",
+   "hs": 3,
+   "as": 0,
+   "utc": "2026-07-02T19:00:00Z"
   }
  ],
  "scorers": [
@@ -595,6 +602,13 @@
   {
    "name": "Vinicius Junior",
    "team": "Brazil",
+   "goals": 4,
+   "pens": 0,
+   "assists": 1
+  },
+  {
+   "name": "Mikel Oyarzabal",
+   "team": "Spain",
    "goals": 4,
    "pens": 0,
    "assists": 1
@@ -693,13 +707,6 @@
   {
    "name": "Cody Gakpo",
    "team": "Netherlands",
-   "goals": 3,
-   "pens": 0,
-   "assists": 1
-  },
-  {
-   "name": "Mikel Oyarzabal",
-   "team": "Spain",
    "goals": 3,
    "pens": 0,
    "assists": 1
