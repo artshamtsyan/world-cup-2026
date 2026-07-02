@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-02T04:39:45.310Z",
+ "updated": "2026-07-02T11:58:03.046Z",
  "source": "football-data.org",
  "results": [
   {
@@ -519,20 +519,6 @@
    "hs": 2,
    "as": 1,
    "utc": "2026-06-29T17:00:00Z"
-  },
-  {
-   "home": "Germany",
-   "away": "Paraguay",
-   "hs": 4,
-   "as": 5,
-   "utc": "2026-06-29T20:30:00Z"
-  },
-  {
-   "home": "Netherlands",
-   "away": "Morocco",
-   "hs": 3,
-   "as": 4,
-   "utc": "2026-06-30T01:00:00Z"
   },
   {
    "home": "Ivory Coast",
