@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-02T11:58:03.046Z",
+ "updated": "2026-07-02T20:41:30.661Z",
  "source": "football-data.org",
  "results": [
   {
@@ -698,6 +698,13 @@
    "assists": 1
   },
   {
+   "name": "Mikel Oyarzabal",
+   "team": "Spain",
+   "goals": 3,
+   "pens": 0,
+   "assists": 1
+  },
+  {
    "name": "Raúl Jiménez",
    "team": "Mexico",
    "goals": 2,
@@ -805,13 +812,6 @@
   {
    "name": "Ayase Ueda",
    "team": "Japan",
-   "goals": 2,
-   "pens": 0,
-   "assists": 1
-  },
-  {
-   "name": "Mikel Oyarzabal",
-   "team": "Spain",
    "goals": 2,
    "pens": 0,
    "assists": 1
