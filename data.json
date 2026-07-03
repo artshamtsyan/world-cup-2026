@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-03T06:47:05.045Z",
+ "updated": "2026-07-03T19:36:47.375Z",
  "source": "football-data.org",
  "results": [
   {
@@ -782,6 +782,13 @@
    "assists": 0
   },
   {
+   "name": "Emam Ashour",
+   "team": "Egypt",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
    "name": "Maximiliano Araújo",
    "team": "Uruguay",
    "goals": 2,
@@ -997,13 +1004,6 @@
    "goals": 1,
    "pens": 0,
    "assists": 0
-  },
-  {
-   "name": "Nathaniel Brown",
-   "team": "Germany",
-   "goals": 1,
-   "pens": 0,
-   "assists": 1
   }
  ]
 }
