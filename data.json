@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-03T19:36:47.375Z",
+ "updated": "2026-07-03T22:33:17.715Z",
  "source": "football-data.org",
  "results": [
   {
@@ -586,18 +586,18 @@
  ],
  "scorers": [
   {
+   "name": "Lionel Messi",
+   "team": "Argentina",
+   "goals": 7,
+   "pens": 0,
+   "assists": 0
+  },
+  {
    "name": "Kylian Mbappé",
    "team": "France",
    "goals": 6,
    "pens": 0,
    "assists": 2
-  },
-  {
-   "name": "Lionel Messi",
-   "team": "Argentina",
-   "goals": 6,
-   "pens": 0,
-   "assists": 0
   },
   {
    "name": "Erling Haaland",
