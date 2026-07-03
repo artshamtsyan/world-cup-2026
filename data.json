@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-03T03:16:35.181Z",
+ "updated": "2026-07-03T06:47:05.045Z",
  "source": "football-data.org",
  "results": [
   {
@@ -575,6 +575,13 @@
    "hs": 2,
    "as": 1,
    "utc": "2026-07-02T23:00:00Z"
+  },
+  {
+   "home": "Switzerland",
+   "away": "Algeria",
+   "hs": 2,
+   "as": 0,
+   "utc": "2026-07-03T03:00:00Z"
   }
  ],
  "scorers": [
