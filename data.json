@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-02T22:06:05.943Z",
+ "updated": "2026-07-03T03:16:35.181Z",
  "source": "football-data.org",
  "results": [
   {
@@ -568,6 +568,13 @@
    "hs": 3,
    "as": 0,
    "utc": "2026-07-02T19:00:00Z"
+  },
+  {
+   "home": "Portugal",
+   "away": "Croatia",
+   "hs": 2,
+   "as": 1,
+   "utc": "2026-07-02T23:00:00Z"
   }
  ],
  "scorers": [
@@ -681,7 +688,7 @@
    "team": "Switzerland",
    "goals": 3,
    "pens": 0,
-   "assists": 1
+   "assists": 2
   },
   {
    "name": "Jonathan David",
@@ -712,6 +719,13 @@
    "assists": 1
   },
   {
+   "name": "Cristiano Ronaldo",
+   "team": "Portugal",
+   "goals": 3,
+   "pens": 1,
+   "assists": 0
+  },
+  {
    "name": "Raúl Jiménez",
    "team": "Mexico",
    "goals": 2,
@@ -724,6 +738,13 @@
    "goals": 2,
    "pens": 0,
    "assists": 0
+  },
+  {
+   "name": "Breel Embolo",
+   "team": "Switzerland",
+   "goals": 2,
+   "pens": 1,
+   "assists": 2
   },
   {
    "name": "Crysencio Summerville",
@@ -824,13 +845,6 @@
    "assists": 1
   },
   {
-   "name": "Cristiano Ronaldo",
-   "team": "Portugal",
-   "goals": 2,
-   "pens": 0,
-   "assists": 0
-  },
-  {
    "name": "Nicolas Pépé",
    "team": "Ivory Coast",
    "goals": 2,
@@ -920,13 +934,6 @@
    "goals": 1,
    "pens": 0,
    "assists": 0
-  },
-  {
-   "name": "Breel Embolo",
-   "team": "Switzerland",
-   "goals": 1,
-   "pens": 1,
-   "assists": 2
   },
   {
    "name": "Boualem Khoukhi",
