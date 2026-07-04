@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-04T12:45:26.362Z",
+ "updated": "2026-07-04T19:13:26.318Z",
  "source": "football-data.org",
  "results": [
   {
@@ -596,6 +596,13 @@
    "hs": 1,
    "as": 0,
    "utc": "2026-07-04T01:30:00Z"
+  },
+  {
+   "home": "Canada",
+   "away": "Morocco",
+   "hs": 0,
+   "as": 3,
+   "utc": "2026-07-04T17:00:00Z"
   }
  ],
  "scorers": [
@@ -873,6 +880,13 @@
    "assists": 1
   },
   {
+   "name": "Soufiane Rahimi",
+   "team": "Morocco",
+   "goals": 2,
+   "pens": 0,
+   "assists": 1
+  },
+  {
    "name": "Nicolas Pépé",
    "team": "Ivory Coast",
    "goals": 2,
@@ -919,6 +933,13 @@
    "team": "Belgium",
    "goals": 2,
    "pens": 1,
+   "assists": 0
+  },
+  {
+   "name": "Azzedine Ounahi",
+   "team": "Morocco",
+   "goals": 2,
+   "pens": 0,
    "assists": 0
   },
   {
@@ -1001,20 +1022,6 @@
   {
    "name": "Livano Comenencia",
    "team": "Curaçao",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Nico Schlotterbeck",
-   "team": "Germany",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Jamal Musiala",
-   "team": "Germany",
    "goals": 1,
    "pens": 0,
    "assists": 0
