@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-04T22:57:43.628Z",
+ "updated": "2026-07-05T00:07:13.601Z",
  "source": "football-data.org",
  "results": [
   {
@@ -603,6 +603,13 @@
    "hs": 0,
    "as": 3,
    "utc": "2026-07-04T17:00:00Z"
+  },
+  {
+   "home": "Paraguay",
+   "away": "France",
+   "hs": 0,
+   "as": 1,
+   "utc": "2026-07-04T21:00:00Z"
   }
  ],
  "scorers": [
