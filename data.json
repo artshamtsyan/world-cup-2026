@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-05T00:07:13.601Z",
+ "updated": "2026-07-05T22:09:35.939Z",
  "source": "football-data.org",
  "results": [
   {
@@ -610,6 +610,13 @@
    "hs": 0,
    "as": 1,
    "utc": "2026-07-04T21:00:00Z"
+  },
+  {
+   "home": "Brazil",
+   "away": "Norway",
+   "hs": 1,
+   "as": 2,
+   "utc": "2026-07-05T20:00:00Z"
   }
  ],
  "scorers": [
@@ -621,16 +628,16 @@
    "assists": 2
   },
   {
-   "name": "Lionel Messi",
-   "team": "Argentina",
+   "name": "Erling Haaland",
+   "team": "Norway",
    "goals": 7,
    "pens": 0,
    "assists": 0
   },
   {
-   "name": "Erling Haaland",
-   "team": "Norway",
-   "goals": 5,
+   "name": "Lionel Messi",
+   "team": "Argentina",
+   "goals": 7,
    "pens": 0,
    "assists": 0
   },
