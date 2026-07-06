@@ -635,6 +635,8 @@ const OFFICIAL = {
   88:{a:1,b:1,pa:2,pb:4},
   89:{a:0,b:1},
   90:{a:0,b:3},
+  91:{a:1,b:2},
+  92:{a:2,b:3},
 };
 function isOfficial(n){ return !!OFFICIAL[n]; }
 
@@ -830,6 +832,10 @@ const META = {
       xi:{1:["Orlando Gill","Juan Jose Cáceres","Júnior Alonso","Omar Alderete","Gustavo Gómez","Gustavo Velázquez","Miguel Almirón","Diego Gómez","Julio Enciso","Andrés Cubas","Matías Galarza"],2:["Mike Maignan","Jules Koundé","Lucas Digne","Adrien Rabiot","Dayot Upamecano","William Saliba","Ousmane Dembélé","Manu Koné","Kylian Mbappé","Michael Olise","Bradley Barcola"]}},
   90:{goals:[{t:2,p:"Azzedine Ounahi",m:"50'"},{t:2,p:"Azzedine Ounahi",m:"82'"},{t:2,p:"Soufiane Rahimi",m:"90'+8'"}],
       xi:{1:["Maxime Crépeau","Alistair Johnston","Richie Laryea","Niko Sigur","Moïse Bombito","Luc de Fougerolles","Tajon Buchanan","Stephen Eustáquio","Tani Oluwaseyi","Jonathan David","Ali Ahmed"],2:["Yassine Bounou","Achraf Hakimi","Noussair Mazraoui","Neil El Aynaoui","Issa Diop","Redouane Halhal","Brahim Díaz","Ayyoub Bouaddi","Ismael Saibari","Azzedine Ounahi","Bilal El Khannouss"]}},
+  91:{goals:[{t:2,p:"Erling Haaland",m:"79'"},{t:2,p:"Erling Haaland",m:"90'"},{t:1,p:"Neymar",m:"90'+10'",n:"PEN"}],
+      xi:{1:["Alisson Becker","Danilo","Douglas Santos","Bruno Guimarães","Marquinhos","Gabriel Magalhães","Rayan","Casemiro","Vinícius Júnior","Matheus Cunha","Gabriel Martinelli"],2:["Ørjan Nyland","Julian Ryerson","David Møller Wolfe","Sander Berge","Kristoffer Ajer","Torbjørn Heggem","Martin Ødegaard","Patrick Berg","Erling Haaland","Alexander Sørloth","Antonio Nusa"]}},
+  92:{goals:[{t:2,p:"Jude Bellingham",m:"36'"},{t:2,p:"Jude Bellingham",m:"38'"},{t:1,p:"Julián Quiñones",m:"42'"},{t:2,p:"Harry Kane",m:"60'",n:"PEN",won:"Anthony Gordon"},{t:1,p:"Raúl Jiménez",m:"69'",n:"PEN",won:"Brian Gutiérrez"}],
+      xi:{1:["Raúl Rangel","Jorge Sánchez","Jesús Gallardo","Érik Lira","César Montes","Johan Vásquez","Gilberto Mora","Luis Romo","Raúl Jiménez","Roberto Alvarado","Julián Quiñones"],2:["Jordan Pickford","Jarell Quansah","Nico O'Reilly","Elliot Anderson","Ezri Konsa","Marc Guéhi","Bukayo Saka","Declan Rice","Harry Kane","Jude Bellingham","Anthony Gordon"]}},
 };
 function goalScorer(x,g){ return g.t===1?x.t1:x.t2; }
 function goalNote(n){ return n==="OG"?"(o.g.)":n==="PEN"?"(pen)":"("+n+")"; }
@@ -1249,8 +1255,9 @@ const ESPN_ALIAS={southkorea:"korearepublic",usa:"unitedstates",unitedstatesofam
   capeverdeislands:"capeverde",turkey:"turkiye"};
 const TEAMKEY={}; Object.keys(TEAMS).forEach(n=>TEAMKEY[nkey(n)]=n);
 function espnTeam(name){ let k=nkey(name); k=ESPN_ALIAS[k]||k; return TEAMKEY[k]||null; }
+function realT(label){ return TEAMS[label]?label:(resolveSlot(label)||label); }   // resolve knockout slot to real team
 function findMatch(a,b){ return MATCHES.find(x=>{
-  const t1=TEAMS[x.t1]?x.t1:(resolveSlot(x.t1)||x.t1), t2=TEAMS[x.t2]?x.t2:(resolveSlot(x.t2)||x.t2);
+  const t1=realT(x.t1), t2=realT(x.t2);
   return (t1===a&&t2===b)||(t1===b&&t2===a); }); }
 const PLAY_STATES=["STATUS_FIRST_HALF","STATUS_SECOND_HALF","STATUS_HALFTIME","STATUS_IN_PROGRESS","STATUS_EXTRA_TIME","STATUS_SHOOTOUT","STATUS_END_OF_PERIOD","STATUS_OVERTIME"];
 const FT_STATES=["STATUS_FULL_TIME","STATUS_FINAL","STATUS_FULL_TIME_AET","STATUS_FULL_PEN","STATUS_FINAL_AET","STATUS_FINAL_PEN"];
@@ -1275,7 +1282,7 @@ async function fetchLive(offsets){
         const cs=comps.map(z=>({t:espnTeam(z.team&&z.team.displayName),s:parseInt(z.score,10),so:z.shootoutScore!=null?parseInt(z.shootoutScore,10):null}));
         if(cs.length!==2||!cs[0].t||!cs[1].t) return;
         const m=findMatch(cs[0].t,cs[1].t); if(!m) return;
-        const A=cs.find(z=>z.t===m.t1), B=cs.find(z=>z.t===m.t2); if(!A||!B) return;
+        const rt1=realT(m.t1), rt2=realT(m.t2); const A=cs.find(z=>z.t===rt1), B=cs.find(z=>z.t===rt2); if(!A||!B) return;
         const ft=FT_STATES.includes(st), live=PLAY_STATES.includes(st);
         if((ft||live)&&!isNaN(A.s)&&!isNaN(B.s)){
           const nx={a:A.s,b:B.s,st:ft?"ft":"live"}, pv=LIVE[m.num];
@@ -1285,7 +1292,7 @@ async function fetchLive(offsets){
           if(!(META[m.num]&&META[m.num].goals)){
             const gs=[];
             (c.details||[]).forEach(dt=>{ if(!dt.scoringPlay||dt.shootout) return;   // exclude shootout kicks
-              const tc=id2t[dt.team&&dt.team.id], t=tc===m.t1?1:(tc===m.t2?2:null); if(!t) return;
+              const tc=id2t[dt.team&&dt.team.id], t=tc===rt1?1:(tc===rt2?2:null); if(!t) return;
               const p=(dt.athletesInvolved&&dt.athletesInvolved[0]&&dt.athletesInvolved[0].displayName)||""; if(!p) return;
               const g={t,p,m:(dt.clock&&dt.clock.displayValue)||""};
               if(dt.ownGoal) g.n="OG"; else if(dt.penaltyKick) g.n="PEN";
@@ -1309,7 +1316,7 @@ async function fetchData(){
     const fd={};
     (d.results||[]).forEach(x=>{ const a=espnTeam(x.home), b=espnTeam(x.away); if(!a||!b) return;
       const m=findMatch(a,b); if(!m) return;
-      fd[m.num]={a:(m.t1===a?x.hs:x.as), b:(m.t1===a?x.as:x.hs), st:"ft"};
+      const rt1=realT(m.t1); fd[m.num]={a:(rt1===a?x.hs:x.as), b:(rt1===a?x.as:x.hs), st:"ft"};
     });
     FD=fd; FDSCORERS=(d.scorers&&d.scorers.length)?d.scorers:null; lastDataUpdated=d.updated||null;
     try{ localStorage.setItem("wc2026fd",JSON.stringify(FD)); localStorage.setItem("wc2026fdsc",JSON.stringify(FDSCORERS)); }catch(e){}
