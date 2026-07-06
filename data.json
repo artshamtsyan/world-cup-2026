@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-06T03:33:13.550Z",
+ "updated": "2026-07-06T21:55:01.964Z",
  "source": "football-data.org",
  "results": [
   {
@@ -624,6 +624,13 @@
    "hs": 2,
    "as": 3,
    "utc": "2026-07-06T01:00:00Z"
+  },
+  {
+   "home": "Portugal",
+   "away": "Spain",
+   "hs": 0,
+   "as": 1,
+   "utc": "2026-07-06T19:00:00Z"
   }
  ],
  "scorers": [
