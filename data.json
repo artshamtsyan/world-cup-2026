@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-05T22:09:35.939Z",
+ "updated": "2026-07-06T03:33:13.550Z",
  "source": "football-data.org",
  "results": [
   {
@@ -617,6 +617,13 @@
    "hs": 1,
    "as": 2,
    "utc": "2026-07-05T20:00:00Z"
+  },
+  {
+   "home": "Mexico",
+   "away": "England",
+   "hs": 2,
+   "as": 3,
+   "utc": "2026-07-06T01:00:00Z"
   }
  ],
  "scorers": [
@@ -644,13 +651,27 @@
   {
    "name": "Harry Kane",
    "team": "England",
-   "goals": 5,
-   "pens": 1,
-   "assists": 0
+   "goals": 6,
+   "pens": 2,
+   "assists": 1
+  },
+  {
+   "name": "Julián Quiñones",
+   "team": "Mexico",
+   "goals": 4,
+   "pens": 0,
+   "assists": 1
   },
   {
    "name": "Vinicius Junior",
    "team": "Brazil",
+   "goals": 4,
+   "pens": 0,
+   "assists": 1
+  },
+  {
+   "name": "Jude Bellingham",
+   "team": "England",
    "goals": 4,
    "pens": 0,
    "assists": 1
@@ -677,11 +698,11 @@
    "assists": 1
   },
   {
-   "name": "Julián Quiñones",
+   "name": "Raúl Jiménez",
    "team": "Mexico",
    "goals": 3,
-   "pens": 0,
-   "assists": 1
+   "pens": 1,
+   "assists": 0
   },
   {
    "name": "Folarin Balogun",
@@ -768,13 +789,6 @@
    "assists": 0
   },
   {
-   "name": "Raúl Jiménez",
-   "team": "Mexico",
-   "goals": 2,
-   "pens": 0,
-   "assists": 0
-  },
-  {
    "name": "Cyle Larin",
    "team": "Canada",
    "goals": 2,
@@ -850,13 +864,6 @@
    "goals": 2,
    "pens": 1,
    "assists": 0
-  },
-  {
-   "name": "Jude Bellingham",
-   "team": "England",
-   "goals": 2,
-   "pens": 0,
-   "assists": 1
   },
   {
    "name": "Daniel Muñoz",
