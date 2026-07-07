@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-06T21:55:01.964Z",
+ "updated": "2026-07-07T01:16:47.680Z",
  "source": "football-data.org",
  "results": [
   {
@@ -940,7 +940,7 @@
    "team": "Belgium",
    "goals": 2,
    "pens": 0,
-   "assists": 1
+   "assists": 2
   },
   {
    "name": "Romelu Lukaku",
@@ -964,8 +964,22 @@
    "assists": 0
   },
   {
+   "name": "Malik Tillman",
+   "team": "United States",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
    "name": "Azzedine Ounahi",
    "team": "Morocco",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
+   "name": "Charles De Ketelaere",
+   "team": "Belgium",
    "goals": 2,
    "pens": 0,
    "assists": 0
@@ -1036,20 +1050,6 @@
   {
    "name": "Connor Metcalfe",
    "team": "Australia",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Felix Kalu Nmecha",
-   "team": "Germany",
-   "goals": 1,
-   "pens": 0,
-   "assists": 1
-  },
-  {
-   "name": "Livano Comenencia",
-   "team": "Curaçao",
    "goals": 1,
    "pens": 0,
    "assists": 0
