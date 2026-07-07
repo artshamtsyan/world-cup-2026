@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-07T05:37:52.026Z",
+ "updated": "2026-07-07T17:33:24.365Z",
  "source": "football-data.org",
  "results": [
   {
@@ -922,6 +922,13 @@
    "assists": 1
   },
   {
+   "name": "Mostafa Ziko",
+   "team": "Egypt",
+   "goals": 2,
+   "pens": 0,
+   "assists": 1
+  },
+  {
    "name": "Soufiane Rahimi",
    "team": "Morocco",
    "goals": 2,
@@ -1049,13 +1056,6 @@
   },
   {
    "name": "Nestor Irankunda",
-   "team": "Australia",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Connor Metcalfe",
    "team": "Australia",
    "goals": 1,
    "pens": 0,
