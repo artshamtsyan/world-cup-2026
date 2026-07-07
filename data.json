@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-07T01:16:47.680Z",
+ "updated": "2026-07-07T05:37:52.026Z",
  "source": "football-data.org",
  "results": [
   {
@@ -631,6 +631,13 @@
    "hs": 0,
    "as": 1,
    "utc": "2026-07-06T19:00:00Z"
+  },
+  {
+   "home": "United States",
+   "away": "Belgium",
+   "hs": 1,
+   "as": 4,
+   "utc": "2026-07-07T00:00:00Z"
   }
  ],
  "scorers": [
@@ -796,6 +803,13 @@
    "assists": 0
   },
   {
+   "name": "Romelu Lukaku",
+   "team": "Belgium",
+   "goals": 3,
+   "pens": 0,
+   "assists": 1
+  },
+  {
    "name": "Cyle Larin",
    "team": "Canada",
    "goals": 2,
@@ -943,13 +957,6 @@
    "assists": 2
   },
   {
-   "name": "Romelu Lukaku",
-   "team": "Belgium",
-   "goals": 2,
-   "pens": 0,
-   "assists": 1
-  },
-  {
    "name": "Riyad Mahrez",
    "team": "Algeria",
    "goals": 2,
@@ -982,7 +989,7 @@
    "team": "Belgium",
    "goals": 2,
    "pens": 0,
-   "assists": 0
+   "assists": 1
   },
   {
    "name": "Ladislav Krejčí",
