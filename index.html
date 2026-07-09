@@ -527,7 +527,7 @@ const M = [
 [89,"2026-07-04","5:00 PM","Winner M74","Winner M77","Round of 16","Lincoln Financial Field","Philadelphia"],
 [90,"2026-07-04","1:00 PM","Winner M73","Winner M75","Round of 16","NRG Stadium","Houston"],
 [91,"2026-07-05","4:00 PM","Winner M76","Winner M78","Round of 16","MetLife Stadium","East Rutherford"],
-[92,"2026-07-05","8:00 PM","Winner M79","Winner M80","Round of 16","Estadio Azteca","Mexico City"],
+[92,"2026-07-05","9:00 PM","Winner M79","Winner M80","Round of 16","Estadio Azteca","Mexico City"],
 [93,"2026-07-06","3:00 PM","Winner M83","Winner M84","Round of 16","AT&T Stadium","Arlington"],
 [94,"2026-07-06","8:00 PM","Winner M81","Winner M82","Round of 16","Lumen Field","Seattle"],
 [95,"2026-07-07","12:00 PM","Winner M86","Winner M88","Round of 16","Mercedes-Benz Stadium","Atlanta"],
@@ -637,6 +637,10 @@ const OFFICIAL = {
   90:{a:0,b:3},
   91:{a:1,b:2},
   92:{a:2,b:3},
+  93:{a:0,b:1},
+  94:{a:1,b:4},
+  95:{a:3,b:2},
+  96:{a:0,b:0,pa:4,pb:3},
 };
 function isOfficial(n){ return !!OFFICIAL[n]; }
 
@@ -836,6 +840,13 @@ const META = {
       xi:{1:["Alisson Becker","Danilo","Douglas Santos","Bruno Guimarães","Marquinhos","Gabriel Magalhães","Rayan","Casemiro","Vinícius Júnior","Matheus Cunha","Gabriel Martinelli"],2:["Ørjan Nyland","Julian Ryerson","David Møller Wolfe","Sander Berge","Kristoffer Ajer","Torbjørn Heggem","Martin Ødegaard","Patrick Berg","Erling Haaland","Alexander Sørloth","Antonio Nusa"]}},
   92:{goals:[{t:2,p:"Jude Bellingham",m:"36'"},{t:2,p:"Jude Bellingham",m:"38'"},{t:1,p:"Julián Quiñones",m:"42'"},{t:2,p:"Harry Kane",m:"60'",n:"PEN",won:"Anthony Gordon"},{t:1,p:"Raúl Jiménez",m:"69'",n:"PEN",won:"Brian Gutiérrez"}],
       xi:{1:["Raúl Rangel","Jorge Sánchez","Jesús Gallardo","Érik Lira","César Montes","Johan Vásquez","Gilberto Mora","Luis Romo","Raúl Jiménez","Roberto Alvarado","Julián Quiñones"],2:["Jordan Pickford","Jarell Quansah","Nico O'Reilly","Elliot Anderson","Ezri Konsa","Marc Guéhi","Bukayo Saka","Declan Rice","Harry Kane","Jude Bellingham","Anthony Gordon"]}},
+  93:{goals:[{t:2,p:"Mikel Merino",m:"90'+1'"}],
+      xi:{1:["Diogo Costa","João Cancelo","Nuno Mendes","João Neves","Rúben Dias","Renato Veiga","Pedro Neto","Vitinha","Cristiano Ronaldo","Bruno Fernandes","João Félix"],2:["Unai Simón","Pedro Porro","Marc Cucurella","Pedri","Pau Cubarsí","Aymeric Laporte","Lamine Yamal","Rodri","Mikel Oyarzabal","Dani Olmo","Álex Baena"]}},
+  94:{goals:[{t:2,p:"Charles De Ketelaere",m:"9'"},{t:1,p:"Malik Tillman",m:"31'"},{t:2,p:"Charles De Ketelaere",m:"33'"},{t:2,p:"Hans Vanaken",m:"57'"},{t:2,p:"Romelu Lukaku",m:"90'+3'"}],
+      xi:{1:["Matt Freese","Alex Freeman","Antonee Robinson","Tyler Adams","Chris Richards","Tim Ream","Weston McKennie","Malik Tillman","Folarin Balogun","Sergiño Dest","Christian Pulisic"],2:["Thibaut Courtois","Timothy Castagne","Maxim De Cuyper","Nicolas Raskin","Nathan Ngoy","Brandon Mechele","Dodi Lukébakio","Amadou Onana","Charles De Ketelaere","Youri Tielemans","Leandro Trossard"]}},
+  95:{goals:[{t:2,p:"Yasser Ibrahim",m:"15'"},{t:2,p:"Mostafa Zico",m:"67'"},{t:1,p:"Cristian Romero",m:"79'"},{t:1,p:"Lionel Messi",m:"83'"},{t:1,p:"Enzo Fernández",m:"90'+2'"}],
+      xi:{1:["Emiliano Martínez","Nahuel Molina","Nicolás Tagliafico","Leandro Paredes","Cristian Romero","Lisandro Martínez","Rodrigo De Paul","Alexis Mac Allister","Lionel Messi","Julián Álvarez","Enzo Fernández"],2:["Mostafa Shoubir","Mohamed Hany","Karim Hafez","Mohanad Lashin","Yasser Ibrahim","Ramy Rabia","Haissem Hassan","Marawan Attia","Mostafa Zico","Mohamed Salah","Emam Ashour"]}},
+  96:{xi:{1:["Gregor Kobel","Denis Zakaria","Ricardo Rodríguez","Granit Xhaka","Nico Elvedi","Manuel Akanji","Fabian Rieder","Remo Freuler","Breel Embolo","Ardon Jashari","Dan Ndoye"],2:["Camilo Vargas","Daniel Muñoz","Johan Mojica","Jefferson Lerma","Davinson Sánchez","Jhon Lucumí","Jhon Arias","Gustavo Puerta","Luis Suárez","James Rodríguez","Luis Díaz"]}},
 };
 function goalScorer(x,g){ return g.t===1?x.t1:x.t2; }
 function goalNote(n){ return n==="OG"?"(o.g.)":n==="PEN"?"(pen)":"("+n+")"; }
