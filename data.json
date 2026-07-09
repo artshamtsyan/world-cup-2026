@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-07T19:55:14.779Z",
+ "updated": "2026-07-09T21:57:36.974Z",
  "source": "football-data.org",
  "results": [
   {
@@ -649,18 +649,18 @@
  ],
  "scorers": [
   {
+   "name": "Kylian Mbappé",
+   "team": "France",
+   "goals": 8,
+   "pens": 1,
+   "assists": 2
+  },
+  {
    "name": "Lionel Messi",
    "team": "Argentina",
    "goals": 8,
    "pens": 0,
    "assists": 1
-  },
-  {
-   "name": "Kylian Mbappé",
-   "team": "France",
-   "goals": 7,
-   "pens": 1,
-   "assists": 2
   },
   {
    "name": "Erling Haaland",
@@ -675,6 +675,13 @@
    "goals": 6,
    "pens": 2,
    "assists": 1
+  },
+  {
+   "name": "Ousmane Dembélé",
+   "team": "France",
+   "goals": 5,
+   "pens": 0,
+   "assists": 2
   },
   {
    "name": "Julián Quiñones",
@@ -703,13 +710,6 @@
    "goals": 4,
    "pens": 0,
    "assists": 1
-  },
-  {
-   "name": "Ousmane Dembélé",
-   "team": "France",
-   "goals": 4,
-   "pens": 0,
-   "assists": 2
   },
   {
    "name": "Ismaïla Sarr",
