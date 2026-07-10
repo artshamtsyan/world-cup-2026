@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-09T23:18:13.328Z",
+ "updated": "2026-07-10T20:49:25.961Z",
  "source": "football-data.org",
  "results": [
   {
@@ -824,6 +824,13 @@
    "assists": 1
   },
   {
+   "name": "Charles De Ketelaere",
+   "team": "Belgium",
+   "goals": 3,
+   "pens": 0,
+   "assists": 1
+  },
+  {
    "name": "Cyle Larin",
    "team": "Canada",
    "goals": 2,
@@ -1004,13 +1011,6 @@
    "goals": 2,
    "pens": 0,
    "assists": 0
-  },
-  {
-   "name": "Charles De Ketelaere",
-   "team": "Belgium",
-   "goals": 2,
-   "pens": 0,
-   "assists": 1
   },
   {
    "name": "Ladislav Krejčí",
