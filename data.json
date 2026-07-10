@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-10T20:49:25.961Z",
+ "updated": "2026-07-10T22:02:46.343Z",
  "source": "football-data.org",
  "results": [
   {
@@ -652,6 +652,13 @@
    "hs": 2,
    "as": 0,
    "utc": "2026-07-09T20:00:00Z"
+  },
+  {
+   "home": "Spain",
+   "away": "Belgium",
+   "hs": 2,
+   "as": 1,
+   "utc": "2026-07-10T19:00:00Z"
   }
  ],
  "scorers": [
@@ -1013,6 +1020,13 @@
    "assists": 0
   },
   {
+   "name": "Mikel Merino",
+   "team": "Spain",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
    "name": "Ladislav Krejčí",
    "team": "Czechia",
    "goals": 1,
@@ -1064,13 +1078,6 @@
   {
    "name": "John McGinn",
    "team": "Scotland",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Nestor Irankunda",
-   "team": "Australia",
    "goals": 1,
    "pens": 0,
    "assists": 0
