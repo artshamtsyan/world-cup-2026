@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-14T20:59:54.930Z",
+ "updated": "2026-07-14T22:07:05.849Z",
  "source": "football-data.org",
  "results": [
   {
@@ -673,6 +673,13 @@
    "hs": 3,
    "as": 1,
    "utc": "2026-07-12T01:00:00Z"
+  },
+  {
+   "home": "France",
+   "away": "Spain",
+   "hs": 0,
+   "as": 2,
+   "utc": "2026-07-14T19:00:00Z"
   }
  ],
  "scorers": [
