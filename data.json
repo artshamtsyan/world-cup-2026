@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-14T22:07:05.849Z",
+ "updated": "2026-07-15T22:00:29.613Z",
  "source": "football-data.org",
  "results": [
   {
@@ -680,6 +680,13 @@
    "hs": 0,
    "as": 2,
    "utc": "2026-07-14T19:00:00Z"
+  },
+  {
+   "home": "England",
+   "away": "Argentina",
+   "hs": 1,
+   "as": 2,
+   "utc": "2026-07-15T19:00:00Z"
   }
  ],
  "scorers": [
@@ -695,7 +702,7 @@
    "team": "Argentina",
    "goals": 8,
    "pens": 0,
-   "assists": 2
+   "assists": 4
   },
   {
    "name": "Erling Haaland",
@@ -849,6 +856,13 @@
    "team": "Belgium",
    "goals": 3,
    "pens": 0,
+   "assists": 1
+  },
+  {
+   "name": "Lautaro Martínez",
+   "team": "Argentina",
+   "goals": 3,
+   "pens": 1,
    "assists": 1
   },
   {
@@ -1013,13 +1027,6 @@
    "assists": 2
   },
   {
-   "name": "Lautaro Martínez",
-   "team": "Argentina",
-   "goals": 2,
-   "pens": 1,
-   "assists": 1
-  },
-  {
    "name": "Riyad Mahrez",
    "team": "Algeria",
    "goals": 2,
@@ -1069,6 +1076,13 @@
    "assists": 0
   },
   {
+   "name": "Enzo Fernández",
+   "team": "Argentina",
+   "goals": 2,
+   "pens": 0,
+   "assists": 0
+  },
+  {
    "name": "Ladislav Krejčí",
    "team": "Czechia",
    "goals": 1,
@@ -1092,13 +1106,6 @@
   {
    "name": "Jovo Lukić",
    "team": "Bosnia-Herzegovina",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Mauricio",
-   "team": "Paraguay",
    "goals": 1,
    "pens": 0,
    "assists": 0
