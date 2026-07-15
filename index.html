@@ -524,22 +524,22 @@ const M = [
 [86,"2026-07-03","6:00 PM","Argentina","Cape Verde","Round of 32","Hard Rock Stadium","Miami"],
 [87,"2026-07-03","9:30 PM","Colombia","Ghana","Round of 32","Arrowhead Stadium","Kansas City"],
 [88,"2026-07-03","2:00 PM","Australia","Egypt","Round of 32","AT&T Stadium","Arlington"],
-[89,"2026-07-04","5:00 PM","Winner M74","Winner M77","Round of 16","Lincoln Financial Field","Philadelphia"],
-[90,"2026-07-04","1:00 PM","Winner M73","Winner M75","Round of 16","NRG Stadium","Houston"],
-[91,"2026-07-05","4:00 PM","Winner M76","Winner M78","Round of 16","MetLife Stadium","East Rutherford"],
-[92,"2026-07-05","9:00 PM","Winner M79","Winner M80","Round of 16","Estadio Azteca","Mexico City"],
-[93,"2026-07-06","3:00 PM","Winner M83","Winner M84","Round of 16","AT&T Stadium","Arlington"],
-[94,"2026-07-06","8:00 PM","Winner M81","Winner M82","Round of 16","Lumen Field","Seattle"],
-[95,"2026-07-07","12:00 PM","Winner M86","Winner M88","Round of 16","Mercedes-Benz Stadium","Atlanta"],
-[96,"2026-07-07","4:00 PM","Winner M85","Winner M87","Round of 16","BC Place","Vancouver"],
-[97,"2026-07-09","4:00 PM","Winner M89","Winner M90","Quarter-final","Gillette Stadium","Foxborough"],
-[98,"2026-07-10","3:00 PM","Winner M93","Winner M94","Quarter-final","SoFi Stadium","Inglewood"],
-[99,"2026-07-11","5:00 PM","Winner M91","Winner M92","Quarter-final","Hard Rock Stadium","Miami"],
-[100,"2026-07-11","9:00 PM","Winner M95","Winner M96","Quarter-final","Arrowhead Stadium","Kansas City"],
-[101,"2026-07-14","3:00 PM","Winner M97","Winner M98","Semi-final","AT&T Stadium","Arlington"],
-[102,"2026-07-15","3:00 PM","Winner M99","Winner M100","Semi-final","Mercedes-Benz Stadium","Atlanta"],
-[103,"2026-07-18","5:00 PM","Loser M101","Loser M102","Third-place","Hard Rock Stadium","Miami"],
-[104,"2026-07-19","3:00 PM","Winner M101","Winner M102","Final","MetLife Stadium","East Rutherford"]
+[89, "2026-07-04", "5:00 PM", "Paraguay", "France","Round of 16","Lincoln Financial Field","Philadelphia"],
+[90, "2026-07-04", "1:00 PM", "Canada", "Morocco","Round of 16","NRG Stadium","Houston"],
+[91, "2026-07-05", "4:00 PM", "Brazil", "Norway","Round of 16","MetLife Stadium","East Rutherford"],
+[92, "2026-07-05", "9:00 PM", "Mexico", "England","Round of 16","Estadio Azteca","Mexico City"],
+[93, "2026-07-06", "3:00 PM", "Portugal", "Spain","Round of 16","AT&T Stadium","Arlington"],
+[94, "2026-07-06", "8:00 PM", "United States", "Belgium","Round of 16","Lumen Field","Seattle"],
+[95, "2026-07-07", "12:00 PM", "Argentina", "Egypt","Round of 16","Mercedes-Benz Stadium","Atlanta"],
+[96, "2026-07-07", "4:00 PM", "Switzerland", "Colombia","Round of 16","BC Place","Vancouver"],
+[97, "2026-07-09", "4:00 PM", "France", "Morocco","Quarter-final","Gillette Stadium","Foxborough"],
+[98, "2026-07-10", "3:00 PM", "Spain", "Belgium","Quarter-final","SoFi Stadium","Inglewood"],
+[99, "2026-07-11", "5:00 PM", "Norway", "England","Quarter-final","Hard Rock Stadium","Miami"],
+[100, "2026-07-11", "9:00 PM", "Argentina", "Switzerland","Quarter-final","Arrowhead Stadium","Kansas City"],
+[101, "2026-07-14", "3:00 PM", "France", "Spain","Semi-final","AT&T Stadium","Arlington"],
+[102, "2026-07-15", "3:00 PM", "England", "Argentina","Semi-final","Mercedes-Benz Stadium","Atlanta"],
+[103, "2026-07-18", "5:00 PM", "France", "Loser M102","Third-place","Hard Rock Stadium","Miami"],
+[104, "2026-07-19", "3:00 PM", "Spain", "Winner M102","Final","MetLife Stadium","East Rutherford"]
 ];
 const MATCHES = M.map(r=>({num:r[0],dateET:r[1],timeET:r[2],t1:r[3],t2:r[4],round:r[5],venue:r[6],city:r[7]}));
 
@@ -641,6 +641,11 @@ const OFFICIAL = {
   94:{a:1,b:4},
   95:{a:3,b:2},
   96:{a:0,b:0,pa:4,pb:3},
+  97:{a:2,b:0},
+  98:{a:2,b:1},
+  99:{a:1,b:2},
+  100:{a:3,b:1},
+  101:{a:0,b:2},
 };
 function isOfficial(n){ return !!OFFICIAL[n]; }
 
@@ -847,6 +852,16 @@ const META = {
   95:{goals:[{t:2,p:"Yasser Ibrahim",m:"15'"},{t:2,p:"Mostafa Zico",m:"67'"},{t:1,p:"Cristian Romero",m:"79'"},{t:1,p:"Lionel Messi",m:"83'"},{t:1,p:"Enzo Fernández",m:"90'+2'"}],
       xi:{1:["Emiliano Martínez","Nahuel Molina","Nicolás Tagliafico","Leandro Paredes","Cristian Romero","Lisandro Martínez","Rodrigo De Paul","Alexis Mac Allister","Lionel Messi","Julián Álvarez","Enzo Fernández"],2:["Mostafa Shoubir","Mohamed Hany","Karim Hafez","Mohanad Lashin","Yasser Ibrahim","Ramy Rabia","Haissem Hassan","Marawan Attia","Mostafa Zico","Mohamed Salah","Emam Ashour"]}},
   96:{xi:{1:["Gregor Kobel","Denis Zakaria","Ricardo Rodríguez","Granit Xhaka","Nico Elvedi","Manuel Akanji","Fabian Rieder","Remo Freuler","Breel Embolo","Ardon Jashari","Dan Ndoye"],2:["Camilo Vargas","Daniel Muñoz","Johan Mojica","Jefferson Lerma","Davinson Sánchez","Jhon Lucumí","Jhon Arias","Gustavo Puerta","Luis Suárez","James Rodríguez","Luis Díaz"]}},
+  97:{goals:[{t:1,p:"Kylian Mbappé",m:"60'"},{t:1,p:"Ousmane Dembélé",m:"66'"}],
+      xi:{1:["Mike Maignan","Jules Koundé","Lucas Digne","Adrien Rabiot","Dayot Upamecano","William Saliba","Ousmane Dembélé","Manu Koné","Kylian Mbappé","Michael Olise","Désiré Doué"],2:["Yassine Bounou","Achraf Hakimi","Anass Salah-Eddine","Neil El Aynaoui","Issa Diop","Noussair Mazraoui","Brahim Díaz","Ayyoub Bouaddi","Bilal El Khannouss","Azzedine Ounahi","Chemsdine Talbi"]}},
+  98:{goals:[{t:1,p:"Fabián Ruiz",m:"30'"},{t:2,p:"Charles De Ketelaere",m:"41'"},{t:1,p:"Mikel Merino",m:"88'"}],
+      xi:{1:["Unai Simón","Pedro Porro","Marc Cucurella","Fabián Ruiz","Pau Cubarsí","Aymeric Laporte","Lamine Yamal","Rodri","Mikel Oyarzabal","Dani Olmo","Álex Baena"],2:["Thibaut Courtois","Timothy Castagne","Maxim De Cuyper","Nicolas Raskin","Nathan Ngoy","Brandon Mechele","Leandro Trossard","Hans Vanaken","Charles De Ketelaere","Kevin De Bruyne","Jérémy Doku"]}},
+  99:{goals:[{t:1,p:"Andreas Schjelderup",m:"36'"},{t:2,p:"Jude Bellingham",m:"45'+2'"},{t:2,p:"Jude Bellingham",m:"93'"}],
+      xi:{1:["Ørjan Nyland","Julian Ryerson","David Møller Wolfe","Sander Berge","Kristoffer Ajer","Torbjørn Heggem","Martin Ødegaard","Patrick Berg","Erling Haaland","Alexander Sørloth","Andreas Schjelderup"],2:["Jordan Pickford","Ezri Konsa","Nico O'Reilly","Elliot Anderson","John Stones","Marc Guéhi","Noni Madueke","Declan Rice","Harry Kane","Jude Bellingham","Anthony Gordon"]}},
+  100:{goals:[{t:1,p:"Alexis Mac Allister",m:"10'"},{t:2,p:"Dan Ndoye",m:"67'"},{t:1,p:"Julián Álvarez",m:"112'"},{t:1,p:"Lautaro Martínez",m:"120'+1'"}],
+      xi:{1:["Emiliano Martínez","Nahuel Molina","Nicolás Tagliafico","Leandro Paredes","Cristian Romero","Lisandro Martínez","Rodrigo De Paul","Enzo Fernández","Lionel Messi","Julián Álvarez","Alexis Mac Allister"],2:["Gregor Kobel","Denis Zakaria","Ricardo Rodríguez","Granit Xhaka","Nico Elvedi","Manuel Akanji","Djibril Sow","Remo Freuler","Breel Embolo","Fabian Rieder","Dan Ndoye"]}},
+  101:{goals:[{t:2,p:"Mikel Oyarzabal",m:"22'",n:"PEN",won:"Lamine Yamal"},{t:2,p:"Pedro Porro",m:"58'"}],
+      xi:{1:["Mike Maignan","Jules Koundé","Lucas Digne","Adrien Rabiot","Dayot Upamecano","William Saliba","Ousmane Dembélé","Aurélien Tchouaméni","Kylian Mbappé","Michael Olise","Bradley Barcola"],2:["Unai Simón","Pedro Porro","Marc Cucurella","Fabián Ruiz","Pau Cubarsí","Aymeric Laporte","Lamine Yamal","Rodri","Mikel Oyarzabal","Dani Olmo","Álex Baena"]}},
 };
 function goalScorer(x,g){ return g.t===1?x.t1:x.t2; }
 function goalNote(n){ return n==="OG"?"(o.g.)":n==="PEN"?"(pen)":"("+n+")"; }
