@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-17T07:16:23.330Z",
+ "updated": "2026-07-18T22:22:31.022Z",
  "source": "football-data.org",
  "results": [
   {
@@ -693,9 +693,9 @@
   {
    "name": "Kylian Mbappé",
    "team": "France",
-   "goals": 8,
+   "goals": 9,
    "pens": 1,
-   "assists": 3
+   "assists": 4
   },
   {
    "name": "Lionel Messi",
@@ -801,6 +801,13 @@
    "goals": 3,
    "pens": 0,
    "assists": 0
+  },
+  {
+   "name": "Bradley Barcola",
+   "team": "France",
+   "goals": 3,
+   "pens": 0,
+   "assists": 1
   },
   {
    "name": "Yoane Wissa",
@@ -931,13 +938,6 @@
   {
    "name": "Ramin Rezaeian",
    "team": "Iran",
-   "goals": 2,
-   "pens": 0,
-   "assists": 1
-  },
-  {
-   "name": "Bradley Barcola",
-   "team": "France",
    "goals": 2,
    "pens": 0,
    "assists": 1
@@ -1083,6 +1083,13 @@
    "assists": 0
   },
   {
+   "name": "Bukayo Saka",
+   "team": "England",
+   "goals": 2,
+   "pens": 0,
+   "assists": 3
+  },
+  {
    "name": "Ladislav Krejčí",
    "team": "Czechia",
    "goals": 1,
@@ -1099,13 +1106,6 @@
   {
    "name": "Hyun-Gyu Oh",
    "team": "South Korea",
-   "goals": 1,
-   "pens": 0,
-   "assists": 0
-  },
-  {
-   "name": "Jovo Lukić",
-   "team": "Bosnia-Herzegovina",
    "goals": 1,
    "pens": 0,
    "assists": 0
