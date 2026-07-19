@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-18T23:26:31.901Z",
+ "updated": "2026-07-19T22:52:39.300Z",
  "source": "football-data.org",
  "results": [
   {
@@ -694,6 +694,13 @@
    "hs": 4,
    "as": 6,
    "utc": "2026-07-18T21:00:00Z"
+  },
+  {
+   "home": "Spain",
+   "away": "Argentina",
+   "hs": 1,
+   "as": 0,
+   "utc": "2026-07-19T19:00:00Z"
   }
  ],
  "scorers": [
