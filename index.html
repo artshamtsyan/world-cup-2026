@@ -647,6 +647,7 @@ const OFFICIAL = {
   100:{a:3,b:1},
   101:{a:0,b:2},
   102:{a:1,b:2},
+  103:{a:4,b:6},
 };
 function isOfficial(n){ return !!OFFICIAL[n]; }
 
@@ -865,6 +866,8 @@ const META = {
       xi:{1:["Mike Maignan","Jules Koundé","Lucas Digne","Adrien Rabiot","Dayot Upamecano","William Saliba","Ousmane Dembélé","Aurélien Tchouaméni","Kylian Mbappé","Michael Olise","Bradley Barcola"],2:["Unai Simón","Pedro Porro","Marc Cucurella","Fabián Ruiz","Pau Cubarsí","Aymeric Laporte","Lamine Yamal","Rodri","Mikel Oyarzabal","Dani Olmo","Álex Baena"]}},
   102:{goals:[{t:1,p:"Anthony Gordon",m:"55'"},{t:2,p:"Enzo Fernández",m:"85'"},{t:2,p:"Lautaro Martínez",m:"90'+2'"}],
       xi:{1:["Jordan Pickford","Reece James","Djed Spence","Elliot Anderson","John Stones","Marc Guéhi","Morgan Rogers","Declan Rice","Harry Kane","Jude Bellingham","Anthony Gordon"],2:["Emiliano Martínez","Nahuel Molina","Nicolás Tagliafico","Leandro Paredes","Cristian Romero","Lisandro Martínez","Giuliano Simeone","Enzo Fernández","Lionel Messi","Alexis Mac Allister","Julián Álvarez"]}},
+  103:{goals:[{t:2,p:"Declan Rice",m:"3'"},{t:2,p:"Ezri Konsa",m:"18'"},{t:2,p:"Bukayo Saka",m:"37'"},{t:2,p:"Bukayo Saka",m:"45'+1'"},{t:1,p:"Kylian Mbappé",m:"48'"},{t:1,p:"Bradley Barcola",m:"54'"},{t:1,p:"Kylian Mbappé",m:"66'"},{t:2,p:"Bukayo Saka",m:"87'",n:"PEN",won:"Djed Spence"},{t:1,p:"Ousmane Dembélé",m:"90'+6'"},{t:2,p:"Jude Bellingham",m:"90'+8'"}],
+      xi:{1:["Mike Maignan","Malo Gusto","Theo Hernández","Adrien Rabiot","Ibrahima Konaté","Maxence Lacroix","Michael Olise","Warren Zaïre-Emery","Kylian Mbappé","Rayan Cherki","Désiré Doué"],2:["Dean Henderson","Jarell Quansah","Djed Spence","Declan Rice","Ezri Konsa","Marc Guéhi","Bukayo Saka","Morgan Rogers","Ivan Toney","Eberechi Eze","Marcus Rashford"]}},
 };
 function goalScorer(x,g){ return g.t===1?x.t1:x.t2; }
 function goalNote(n){ return n==="OG"?"(o.g.)":n==="PEN"?"(pen)":"("+n+")"; }
